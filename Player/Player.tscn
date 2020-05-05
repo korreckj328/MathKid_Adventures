@@ -82,10 +82,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 11 ]
+"values": [ 10, 11 ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -118,6 +118,7 @@ gravity = 750
 
 [node name="Sprite" type="Sprite" parent="."]
 vframes = 12
+frame = 11
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2( 0.369217, 5.90749 )
@@ -134,4 +135,4 @@ anims/swim = SubResource( 7 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.4, 0.4 )
+zoom = Vector2( 1.4, 1.4 )
