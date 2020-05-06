@@ -1,7 +1,11 @@
 extends KinematicBody2D
 
+signal lifeChanged
+signal dead
+
 enum {IDLE, HURT, JUMP, RUN, DEAD}
 
+var life
 var state
 var anim
 var newAnim
@@ -21,11 +25,20 @@ func changeState(newState):
 			newAnim = "idle"
 		HURT:
 			newAnim = "hurt"
+			velocity.y = -200 * sign(velocity.y)
+			velocity.x = -100 * sign(velocity.x)
+			life -= 1
+			emit_signal("lifeChanged", life)
+			yield(get_tree().create_timer(0.5), "timeout")
+			changeState(IDLE)
+			if life <= 0:
+				changeState(DEAD)
 		JUMP:
 			newAnim = "jump"
 		RUN:
 			newAnim = "run"
 		DEAD:
+			emit_signal("dead")
 			hide()
 
 func _physics_process(delta):
@@ -67,6 +80,16 @@ func getInput():
 		changeState(JUMP)
 	
 
+func start(pos):
+	life = 3
+	emit_signal("lifeChanged", life)
+	position = pos
+	show()
+	changeState(IDLE)
+
+func hurt():
+	if state != HURT:
+		changeState(HURT)
 
 
 

@@ -112,8 +112,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-runSpeed = 150
-jumpSpeed = -300
+runSpeed = 350
+jumpSpeed = -600
 gravity = 750
 
 [node name="Sprite" type="Sprite" parent="."]
