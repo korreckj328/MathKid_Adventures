@@ -18,10 +18,10 @@ func _ready():
 func setCameraLimits():
 	var mapSize = $World.get_used_rect()
 	var cellSize = $World.cell_size
-	$Male/Camera2D.limit_left = (mapSize.position.x - 5) * cellSize.x
-	$Male/Camera2D.limit_right = (mapSize.end.x + 5) * cellSize.x
-	$Male/Camera2D.limit_top = (mapSize.position.y - 5) * cellSize.y
-	$Male/Camera2D.limit_bottom = (mapSize.end.y + 5) * cellSize.y
+	$Male/Camera2D.limit_left = (mapSize.position.x + 11) * cellSize.x
+	$Male/Camera2D.limit_right = (mapSize.end.x + 10) * cellSize.x
+	$Male/Camera2D.limit_top = (mapSize.position.y - 100) * cellSize.y
+	$Male/Camera2D.limit_bottom = (mapSize.end.y + 10) * cellSize.y
 
 func spawnCoins():
 	for cell in coins.get_used_cells():

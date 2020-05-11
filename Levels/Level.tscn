@@ -12,6 +12,15 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="BackLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 1536, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/BackLayer"]
+centered = false
+
 [node name="World" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 70, 70 )
