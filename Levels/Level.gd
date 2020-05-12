@@ -49,3 +49,7 @@ func onCoinPickup():
 
 
 
+
+
+func _on_Male_dead():
+	GameState.restart()

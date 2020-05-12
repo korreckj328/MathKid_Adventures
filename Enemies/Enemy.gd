@@ -3,8 +3,6 @@ extends KinematicBody2D
 export (int) var speed
 export (int) var gravity
 
-signal enemyDead
-
 var velocity = Vector2()
 var facing = 1
 

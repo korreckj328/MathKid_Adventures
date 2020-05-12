@@ -43,3 +43,4 @@ jumpSpeed = -300
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource( 5 )]
+[connection signal="dead" from="Male" to="." method="_on_Male_dead"]
