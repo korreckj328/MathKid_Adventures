@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Levels/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Backgrounds/colored_land.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/BlueSlime/BlueSlime.tscn" type="PackedScene" id=3]
 
 [node name="LevelOne" instance=ExtResource( 1 )]
+position = Vector2( 741.94, 376.705 )
 
 [node name="Sprite" parent="ParallaxBackground/BackLayer" index="0"]
 scale = Vector2( 1.5, 1.5 )
@@ -22,3 +24,6 @@ jumpSpeed = -500
 
 [node name="PlayerStart" parent="." index="4"]
 position = Vector2( -563.891, 115.94 )
+
+[node name="BlueSlime" parent="." index="5" instance=ExtResource( 3 )]
+position = Vector2( 727.408, 258.139 )

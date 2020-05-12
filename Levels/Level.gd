@@ -9,10 +9,14 @@ var score
 
 func _ready():
 	score = 0
+	emit_signal("scoreChanged", score)
 	coins.hide()
 	$Male.start($PlayerStart.position)
 	setCameraLimits()
 	spawnCoins()
+	$Male.connect("lifeChanged", $CanvasLayer/HUD, "onPlayerLifeChanged")
+	connect("scoreChanged", $CanvasLayer/HUD, "onScoreChanged")
+	
 
 
 func setCameraLimits():
@@ -37,7 +41,7 @@ func spawnCoins():
 
 func onCoinPickup():
 	score += 1
-	emit_signal("scoreChanged")
+	emit_signal("scoreChanged", score)
 			
 
 

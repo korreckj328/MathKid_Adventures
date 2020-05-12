@@ -52,6 +52,15 @@ func _physics_process(delta):
 		changeState(IDLE)
 	if state == JUMP and velocity.y > 0:
 		newAnim = "fall"
+	for idx in range(get_slide_count()):
+		var collision = get_slide_collision(idx)
+		if collision.collider.is_in_group("Enemies"):
+			var playerFeet = (position + $Hitbox.shape.extents).y
+			if playerFeet < collision.collider.position.y:
+				collision.collider.takeDamage()
+				velocity.y += -200
+			else:
+				hurt()
 
 func getInput():
 	if state == HURT:
