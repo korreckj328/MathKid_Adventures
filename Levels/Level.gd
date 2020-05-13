@@ -13,6 +13,7 @@ func _ready():
 	coins.hide()
 	$Male.start($PlayerStart.position)
 	setCameraLimits()
+	setPlayerLimits()
 	spawnCoins()
 	$Male.connect("lifeChanged", $CanvasLayer/HUD, "onPlayerLifeChanged")
 	connect("scoreChanged", $CanvasLayer/HUD, "onScoreChanged")
@@ -26,6 +27,12 @@ func setCameraLimits():
 	$Male/Camera2D.limit_right = (mapSize.end.x + 10) * cellSize.x
 	$Male/Camera2D.limit_top = (mapSize.position.y - 100) * cellSize.y
 	$Male/Camera2D.limit_bottom = (mapSize.end.y + 10) * cellSize.y
+
+func setPlayerLimits():
+	var mapSize = $World.get_used_rect()
+	var cellSize = $World.cell_size
+	var mapBottom = (mapSize.end.y + 5) * cellSize.y
+	$Male.SetMapBottom(mapBottom)
 
 func spawnCoins():
 	for cell in coins.get_used_cells():

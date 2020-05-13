@@ -10,6 +10,7 @@ var state
 var anim
 var newAnim
 var velocity = Vector2()
+var mapBottom = 20000
 
 export(int) var runSpeed
 export(int) var jumpSpeed
@@ -17,6 +18,9 @@ export(int) var gravity
 
 func _ready():
 	changeState(IDLE)
+
+func SetMapBottom(value):
+	mapBottom = value
 
 func changeState(newState):
 	state = newState
@@ -42,6 +46,9 @@ func changeState(newState):
 			hide()
 
 func _physics_process(delta):
+	if position.y > mapBottom:
+		changeState(DEAD)
+		return
 	velocity.y += gravity * delta
 	getInput()
 	if newAnim != anim:
