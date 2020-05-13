@@ -58,3 +58,13 @@ shape = SubResource( 1 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Move = SubResource( 2 )
 anims/Squished = SubResource( 3 )
+
+[node name="CastLeft" type="RayCast2D" parent="."]
+position = Vector2( -25, 0 )
+enabled = true
+cast_to = Vector2( -20, 35 )
+
+[node name="CastRight" type="RayCast2D" parent="."]
+position = Vector2( 18, 0 )
+enabled = true
+cast_to = Vector2( 20, 35 )

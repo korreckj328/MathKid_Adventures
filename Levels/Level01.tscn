@@ -29,7 +29,7 @@ runSpeed = 300
 jumpSpeed = -500
 
 [node name="PlayerStart" parent="." index="4"]
-position = Vector2( -507.098, 870.029 )
+position = Vector2( -519.436, 758.992 )
 
 [node name="BlueSlime" parent="." index="5" instance=ExtResource( 3 )]
 position = Vector2( 765.718, 965.124 )

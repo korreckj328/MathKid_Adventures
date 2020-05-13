@@ -17,7 +17,20 @@ func _physics_process(delta):
 		$AnimationPlayer.play(anim)
 	
 	velocity.y += gravity * delta
-	velocity.x = facing * speed
+	if facing == -1:
+		if $CastLeft.is_colliding():
+			velocity.x = facing * speed
+		else:
+			facing = facing * -1
+			velocity.x = facing * speed
+			velocity.y = -100
+	else:
+		if $CastRight.is_colliding():
+			velocity.x = facing * speed
+		else:
+			facing = facing * -1
+			velocity.x = facing * speed
+			velocity.y = -100
 	velocity = move_and_slide(velocity,Vector2(0,-1))
 	for idx in range(get_slide_count()):
 		var collision = get_slide_collision(idx)
