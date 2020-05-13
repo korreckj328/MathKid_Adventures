@@ -1,4 +1,4 @@
-extends "res://Items/Item.gd"
+extends Area2D
 
 signal flagReached
 
@@ -11,36 +11,20 @@ var state
 func _ready():
 	changeState(DOWN)
 
-func _on_body_entered(body):
-	if state == DOWN:
-		changeState(UP)
-		emit_signal("flagReached")
-
 func changeState(newState):
 	state = newState
 	match state:
 		UP:
-			newAnim = "dualImage"
+			newAnim = "UP"
 		DOWN:
-			newAnim = "singleImage"
+			newAnim = "DOWN"
+	$AnimationPlayer.play(newAnim)
 
-func _physics_process(_delta):
-	if anim != newAnim:
-		anim = newAnim
-	$AnimationPlayer.play(anim)
-
+func _on_Timer_timeout():
+	emit_signal("flagReached")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+func _on_BlueFlag_body_entered(_body):
+	if state == DOWN:
+		changeState(UP)
+		$Timer.start()

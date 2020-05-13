@@ -42,14 +42,9 @@ func spawnCoins():
 func onCoinPickup():
 	score += 1
 	emit_signal("scoreChanged", score)
-			
-
-
-
-
-
-
-
 
 func _on_Male_dead():
 	GameState.restart()
+
+func _on_BlueFlag_flagReached():
+	GameState.nextLevel()

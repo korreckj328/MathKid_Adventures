@@ -1,16 +1,64 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Items/Flags/Blue/spritesheet.png" type="Texture" id=1]
-[ext_resource path="res://Items/Item.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Items/Flags/Blue/BlueFlag.gd" type="Script" id=3]
 
-[node name="BlueFlag" instance=ExtResource( 2 )]
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 19, 36 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "DOWN"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "UP"
+length = 0.6
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[node name="BlueFlag" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
 script = ExtResource( 3 )
 
-[node name="Sprite" parent="." index="0"]
+[node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 vframes = 3
 frame = 2
 
-[node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( -28, 0 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -23, 2 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/DOWN = SubResource( 3 )
+anims/UP = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+[connection signal="body_entered" from="." to="." method="_on_BlueFlag_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

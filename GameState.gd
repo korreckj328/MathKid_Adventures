@@ -11,7 +11,7 @@ func restart():
 
 func nextLevel():
 	currentLevel += 1
-	if currentLevel >= numberOfLevels:
+	if currentLevel > numberOfLevels:
 		get_tree().reload_current_scene()
 
 
