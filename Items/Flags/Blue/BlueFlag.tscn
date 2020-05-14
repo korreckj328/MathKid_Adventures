@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 19, 36 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "DOWN"
 length = 0.1
 tracks/0/type = "value"
@@ -22,8 +22,7 @@ tracks/0/keys = {
 "values": [ 2 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "UP"
+[sub_resource type="Animation" id=3]
 length = 0.6
 loop = true
 step = 0.3
@@ -55,10 +54,10 @@ position = Vector2( -23, 2 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/DOWN = SubResource( 3 )
-anims/UP = SubResource( 2 )
+anims/DOWN = SubResource( 2 )
+anims/UP = SubResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 3.0
 [connection signal="body_entered" from="." to="." method="_on_BlueFlag_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
