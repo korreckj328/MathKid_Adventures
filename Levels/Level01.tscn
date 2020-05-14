@@ -38,7 +38,7 @@ position = Vector2( 765.718, 965.124 )
 position = Vector2( 2037.18, 957.967 )
 
 [node name="BlueSlime3" parent="." index="7" instance=ExtResource( 3 )]
-position = Vector2( 2550.06, 895.945 )
+position = Vector2( 2483.85, 957.066 )
 
 [node name="BlueSlime4" parent="." index="8" instance=ExtResource( 3 )]
 position = Vector2( 3497.1, 752.815 )
