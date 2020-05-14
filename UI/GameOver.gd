@@ -1,5 +1,7 @@
 extends Control
 
+enum Operators {ADD, SUBTRACT, MULTIPLY}
+
 var operandOne
 var operandTwo
 var operator
@@ -7,41 +9,89 @@ var correctAnswer
 var userAnswer
 
 func _ready():
+	$GoButton.disabled = true
+	$TryAgainButton.disabled = true
+	$GoButton.visible = false
+	$TryAgainButton.visible = false
+	SetQuestion()
+
+func SetQuestion():
 	operandOne = GameState.GetOperand()
-	operandTwo = GameState.GetOperand()
+	
+	
+	operator = GameState.GetOperator()
+	match operator:
+		Operators.ADD:
+			operator = "+"
+			operandTwo = GameState.GetOperand()
+			correctAnswer = operandOne + operandTwo
+		Operators.SUBTRACT:
+			operator = "-"
+			operandTwo = GameState.GetOperand()
+			correctAnswer = operandOne - operandTwo
+		Operators.MULTIPLY:
+			operator = "x"
+			operandTwo = GameState.GetMultiplicationOperand()
+			correctAnswer = operandOne * operandTwo
 	if operandOne < operandTwo:
 		var temp = operandOne
 		operandOne = operandTwo
 		operandTwo = temp
-	operator = GameState.GetOperator()
-	match operator:
-		0:
-			operator = "+"
-			correctAnswer = operandOne + operandTwo
-		1:
-			operator = "-"
-			correctAnswer = operandOne - operandTwo
-		2:
-			operator = "X"
-			correctAnswer = operandOne * operandTwo
 	$Operand1.text = str(operandOne)
 	$Operand2.text = str(operandTwo)
 	$Operator.text = operator
-	
+	$Answer.clear()
 
 
-func _on_GoButton_pressed():
+func _on_CheckButton_pressed():
 	userAnswer = $Answer.text
+	
 	if userAnswer == "":
 		return
 	
-	#finally going to move to the next scene
-	var levelNumberInteger = GameState.currentLevel
-	var levelNumber = str(levelNumberInteger).pad_zeros(2)
-	var scene = "res://Levels/Level%s.tscn" % levelNumber
-	get_tree().change_scene(scene)
+	for character in userAnswer:
+		if character in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]:
+			pass
+		else:
+			$Message.text = "I'm sorry the answer\nmust be a number"
+			$Answer.clear()
+			return
+	
+	if userAnswer != str(correctAnswer):
+		$Message.text = "I'm sorry the answer\nis"
+		$Answer.text = str(correctAnswer)
+		$Answer.editable = false
+		$CheckButton.disabled = true
+		$CheckButton.visible = false
+		$TryAgainButton.disabled = false
+		$TryAgainButton.visible = true
+		return
+	
+	$Message.text = "Correct!"
+	$Answer.editable = false
+	$CheckButton.disabled = true
+	$CheckButton.visible = false
+	$GoButton.disabled = false
+	$GoButton.visible = true
+	
 
 
 func _on_ExitButton_pressed():
 	get_tree().change_scene("res://UI/TitleScreen.tscn")
 
+
+
+func _on_TryAgainButton_pressed():
+	$Message.text = "Here's another question"
+	SetQuestion()
+	$Answer.editable = true
+	$CheckButton.disabled = false
+	$CheckButton.visible = true
+	$TryAgainButton.disabled = true
+	$TryAgainButton.visible = false
+
+func _on_GoButton_pressed():
+	var levelNumberInteger = GameState.currentLevel
+	var levelNumber = str(levelNumberInteger).pad_zeros(2)
+	var scene = "res://Levels/Level%s.tscn" % levelNumber
+	get_tree().change_scene(scene)

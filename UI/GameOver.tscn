@@ -124,6 +124,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CheckButton" type="Button" parent="."]
+margin_left = 633.0
+margin_top = 424.0
+margin_right = 818.0
+margin_bottom = 494.0
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+text = "Check"
+
+[node name="TryAgainButton" type="Button" parent="."]
+margin_left = 633.0
+margin_top = 424.0
+margin_right = 818.0
+margin_bottom = 494.0
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+text = "Try Again"
+
 [node name="GoButton" type="Button" parent="."]
 margin_left = 633.0
 margin_top = 424.0
@@ -141,5 +159,7 @@ margin_bottom = 491.689
 custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 5 )
 text = "Exit"
+[connection signal="pressed" from="CheckButton" to="." method="_on_CheckButton_pressed"]
+[connection signal="pressed" from="TryAgainButton" to="." method="_on_TryAgainButton_pressed"]
 [connection signal="pressed" from="GoButton" to="." method="_on_GoButton_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]

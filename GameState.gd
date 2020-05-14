@@ -14,6 +14,9 @@ func _ready():
 func GetOperand():
 	return rng.randi_range(10,99)
 
+func GetMultiplicationOperand():
+	return rng.randi_range(0,9)
+
 func GetOperator():
 	return rng.randi_range(0,2)
 
