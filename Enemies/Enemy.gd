@@ -8,7 +8,10 @@ var facing = 1
 
 var anim
 var newAnim
+var mapBottom = 2000000
 
+func SetMapBottom(value):
+	mapBottom = value
 
 func _physics_process(delta):
 	$Sprite.flip_h = velocity.x > 0
@@ -39,7 +42,7 @@ func _physics_process(delta):
 		if collision.normal.x != 0:
 			facing = sign(collision.normal.x)
 			velocity.y = -100
-	if position.y > 1000:
+	if position.y > mapBottom:
 		queue_free()
 
 func _ready():

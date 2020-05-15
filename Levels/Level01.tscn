@@ -31,25 +31,30 @@ jumpSpeed = -500
 [node name="PlayerStart" parent="." index="4"]
 position = Vector2( -519.436, 758.992 )
 
-[node name="BlueSlime" parent="." index="5" instance=ExtResource( 3 )]
-position = Vector2( 765.718, 965.124 )
+[node name="Enemies" type="Node" parent="." index="5"]
 
-[node name="BlueSlime2" parent="." index="6" instance=ExtResource( 3 )]
-position = Vector2( 2037.18, 957.967 )
+[node name="BlueSlime6" parent="Enemies" index="0" instance=ExtResource( 3 )]
+position = Vector2( 1357.45, 1330.75 )
 
-[node name="BlueSlime3" parent="." index="7" instance=ExtResource( 3 )]
-position = Vector2( 2483.85, 957.066 )
+[node name="BlueSlime" parent="Enemies" index="1" instance=ExtResource( 3 )]
+position = Vector2( 1507.66, 1341.83 )
 
-[node name="BlueSlime4" parent="." index="8" instance=ExtResource( 3 )]
-position = Vector2( 3497.1, 752.815 )
+[node name="BlueSlime2" parent="Enemies" index="2" instance=ExtResource( 3 )]
+position = Vector2( 2779.12, 1334.67 )
 
-[node name="BlueSlime5" parent="." index="9" instance=ExtResource( 3 )]
-position = Vector2( 5276.68, 955.582 )
+[node name="BlueSlime3" parent="Enemies" index="3" instance=ExtResource( 3 )]
+position = Vector2( 3225.79, 1333.77 )
+
+[node name="BlueSlime4" parent="Enemies" index="4" instance=ExtResource( 3 )]
+position = Vector2( 4239.04, 1129.52 )
+
+[node name="BlueSlime5" parent="Enemies" index="5" instance=ExtResource( 3 )]
+position = Vector2( 6018.62, 1332.29 )
 
 [node name="HUD" parent="CanvasLayer" index="0"]
 margin_right = -53.9999
 margin_bottom = 74.0
 
-[node name="BlueFlag" parent="." index="11" instance=ExtResource( 4 )]
+[node name="BlueFlag" parent="." index="7" instance=ExtResource( 4 )]
 position = Vector2( 7050.87, 943.346 )
 [connection signal="flagReached" from="BlueFlag" to="." method="_on_BlueFlag_flagReached"]

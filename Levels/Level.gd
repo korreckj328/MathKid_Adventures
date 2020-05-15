@@ -1,7 +1,8 @@
 extends Node2D
 
 signal scoreChanged
-
+onready var slimes = $Enemies.get_children()
+	
 onready var coins = $Coins
 var BronzeCoin = preload("res://Items/Coins/Bronze/BronzeCoin.tscn")
 var score
@@ -17,7 +18,11 @@ func _ready():
 	spawnCoins()
 	$Male.connect("lifeChanged", $CanvasLayer/HUD, "onPlayerLifeChanged")
 	connect("scoreChanged", $CanvasLayer/HUD, "onScoreChanged")
-	
+	var mapSize = $World.get_used_rect()
+	var cellSize = $World.cell_size
+	var mapBottom = (mapSize.end.y + 5) * cellSize.y
+	for slime in slimes:
+		slime.SetMapBottom(mapBottom)
 
 
 func setCameraLimits():
@@ -54,4 +59,5 @@ func _on_Male_dead():
 	GameState.restart()
 
 func _on_BlueFlag_flagReached():
-	GameState.nextLevel()
+	var map = GameState.nextLevel()
+	get_tree().change_scene(map)

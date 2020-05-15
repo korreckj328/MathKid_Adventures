@@ -1,6 +1,7 @@
 extends Node
 
-var numberOfLevels = 1
+var startingLevel = 1
+var numberOfLevels = 2
 var currentLevel = 1
 var rng = RandomNumberGenerator.new()
 
@@ -26,7 +27,10 @@ func restart():
 func nextLevel():
 	currentLevel += 1
 	if currentLevel > numberOfLevels:
-		get_tree().reload_current_scene()
+		currentLevel = startingLevel
+	var levelNumber = str(currentLevel).pad_zeros(2)
+	var scene = "res://Levels/Level%s.tscn" % levelNumber
+	return scene
 
 
 
