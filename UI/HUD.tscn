@@ -14,15 +14,15 @@ font_data = ExtResource( 1 )
 anchor_right = 1.0
 margin_left = 20.0
 margin_top = 20.0
-margin_right = 20.0
-margin_bottom = 20.0
+margin_right = -53.9999
+margin_bottom = 74.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 700.0
+margin_right = 950.0
 margin_bottom = 54.0
 
 [node name="ScoreLabel" type="Label" parent="HBoxContainer"]
@@ -37,8 +37,8 @@ custom_constants/shadow_as_outline = 5
 text = "0"
 
 [node name="LifeCounter" type="HBoxContainer" parent="HBoxContainer"]
-margin_left = 533.0
-margin_right = 700.0
+margin_left = 783.0
+margin_right = 950.0
 margin_bottom = 54.0
 grow_horizontal = 0
 
