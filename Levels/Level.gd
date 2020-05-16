@@ -2,7 +2,7 @@ extends Node2D
 
 signal scoreChanged
 onready var slimes = $Enemies.get_children()
-	
+onready var platforms = $Platforms
 onready var coins = $Coins
 var BronzeCoin = preload("res://Items/Coins/Bronze/BronzeCoin.tscn")
 var score
@@ -20,9 +20,13 @@ func _ready():
 	emit_signal("scoreChanged", score)
 	var mapSize = $World.get_used_rect()
 	var cellSize = $World.cell_size
+	var mapTop = (mapSize.position.y + 50)
 	var mapBottom = (mapSize.end.y + 5) * cellSize.y
 	for slime in slimes:
 		slime.SetMapBottom(mapBottom)
+	if platforms.get_child_count() != 0:
+		for platform in platforms.get_children():
+			platform.SetMapTop(mapTop)
 
 
 func setCameraLimits():
