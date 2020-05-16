@@ -9,8 +9,7 @@ var score
 
 
 func _ready():
-	score = 0
-	emit_signal("scoreChanged", score)
+	score = GameState.score
 	coins.hide()
 	$Male.start($PlayerStart.position)
 	setCameraLimits()
@@ -18,6 +17,7 @@ func _ready():
 	spawnCoins()
 	$Male.connect("lifeChanged", $CanvasLayer/HUD, "onPlayerLifeChanged")
 	connect("scoreChanged", $CanvasLayer/HUD, "onScoreChanged")
+	emit_signal("scoreChanged", score)
 	var mapSize = $World.get_used_rect()
 	var cellSize = $World.cell_size
 	var mapBottom = (mapSize.end.y + 5) * cellSize.y
@@ -51,11 +51,14 @@ func spawnCoins():
 				add_child(c)
 				c.connect("pickup", self, "onCoinPickup")
 
+
 func onCoinPickup():
 	score += 1
+	GameState.score = score
 	emit_signal("scoreChanged", score)
 
 func _on_Male_dead():
+	GameState.score = 0
 	GameState.restart()
 
 func _on_BlueFlag_flagReached():

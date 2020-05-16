@@ -51,10 +51,6 @@ position = Vector2( 4239.04, 1129.52 )
 [node name="BlueSlime5" parent="Enemies" index="5" instance=ExtResource( 3 )]
 position = Vector2( 6018.62, 1332.29 )
 
-[node name="HUD" parent="CanvasLayer" index="0"]
-margin_right = -53.9999
-margin_bottom = 74.0
-
 [node name="BlueFlag" parent="." index="7" instance=ExtResource( 4 )]
 position = Vector2( 7050.87, 943.346 )
 [connection signal="flagReached" from="BlueFlag" to="." method="_on_BlueFlag_flagReached"]

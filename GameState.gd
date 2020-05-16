@@ -3,6 +3,7 @@ extends Node
 var startingLevel = 1
 var numberOfLevels = 2
 var currentLevel = 1
+var score
 var rng = RandomNumberGenerator.new()
 
 var gameScene = "res://Main.tscn"
@@ -10,6 +11,7 @@ var titleScene = "res://UI/TitleScreen.tscn"
 var gameOverScene = "res://UI/GameOver.tscn"
 
 func _ready():
+	score = 0
 	rng.randomize()
 
 func GetOperand():
@@ -32,6 +34,14 @@ func nextLevel():
 	var scene = "res://Levels/Level%s.tscn" % levelNumber
 	return scene
 
+func getScore():
+	return score
+
+func setScore(value):
+	score = value
+
+func resetScore():
+	score = 0
 
 
 
