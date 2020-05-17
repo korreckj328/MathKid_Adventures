@@ -54,20 +54,37 @@ func _physics_process(delta):
 	if newAnim != anim:
 		anim = newAnim
 		$AnimationPlayer.play(anim)
-	velocity = move_and_slide(velocity, Vector2(0,-1))
+	
 	if state == JUMP and is_on_floor():
 		changeState(IDLE)
 	if state == JUMP and velocity.y > 0:
 		newAnim = "fall"
-	for idx in range(get_slide_count()):
-		var collision = get_slide_collision(idx)
-		if collision.collider.is_in_group("Enemies"):
-			var playerFeet = (position + $Hitbox.shape.extents).y
-			if playerFeet < collision.collider.position.y:
-				collision.collider.takeDamage()
-				velocity.y += -200
-			else:
-				hurt()
+	var collisions = move_and_collide(velocity * delta)
+	if collisions == null:
+		velocity = move_and_slide(velocity, Vector2(0,-1))
+		for idx in range(get_slide_count()):
+			var collision = get_slide_collision(idx)
+			if collision.collider.is_in_group("Enemies"):
+				var playerFeet = (position + $Hitbox.shape.extents).y
+				if playerFeet < collision.collider.position.y:
+					collision.collider.takeDamage()
+					velocity.y += -200
+					changeState(JUMP)
+				else:
+					hurt()
+	else:
+		if !collisions.collider.is_in_group("MovingPlatforms"):
+			velocity = move_and_slide(velocity, Vector2(0,-1))
+			for idx in range(get_slide_count()):
+				var collision = get_slide_collision(idx)
+				if collision.collider.is_in_group("Enemies"):
+					var playerFeet = (position + $Hitbox.shape.extents).y
+					if playerFeet < collision.collider.position.y:
+						collision.collider.takeDamage()
+						velocity.y += -200
+						changeState(JUMP)
+					else:
+						hurt()
 
 func getInput():
 	if state == HURT:
@@ -92,8 +109,6 @@ func getInput():
 		changeState(RUN)
 	if state == RUN and velocity.x == 0:
 		changeState(IDLE)
-	if state in [IDLE, RUN] and !is_on_floor():
-		changeState(JUMP)
 	
 
 func start(pos):
