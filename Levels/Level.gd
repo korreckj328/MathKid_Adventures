@@ -20,13 +20,14 @@ func _ready():
 	emit_signal("scoreChanged", score)
 	var mapSize = $World.get_used_rect()
 	var cellSize = $World.cell_size
-	var mapTop = (mapSize.position.y + 50)
+	var mapTop = (mapSize.position.y + 800)
 	var mapBottom = (mapSize.end.y + 5) * cellSize.y
 	for slime in slimes:
 		slime.SetMapBottom(mapBottom)
 	if platforms.get_child_count() != 0:
 		for platform in platforms.get_children():
 			platform.SetMapTop(mapTop)
+			platform.SetMapBottom(mapBottom)
 
 
 func setCameraLimits():

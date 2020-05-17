@@ -3,30 +3,25 @@ extends KinematicBody2D
 export (Vector2) var velocity
 
 var mapTop
-var gravityBump = -750
+var gravityBump = 750
 var initialVelocity
+var mapBottom
 
 func _ready():
 	initialVelocity = velocity
 
 func _physics_process(delta):
+	if position.y < mapTop || position.y > mapBottom:
+		velocity = velocity.bounce(Vector2(0, -1))
 	var collision = move_and_collide(velocity * delta)
 	if collision:
-		if collision.collider.name in ["Male", "Female"] || collision.collider.name.match("BlueSlim*"):
-			if velocity.y < 0:
-				velocity.y -= gravityBump
-			if velocity.y > 0:
-				velocity.y = initialVelocity.y
+		if collision.collider.is_in_group("Characters"):
+			position = position + (velocity * delta)
 		else:
-			velocity = velocity * -1
-			if velocity.y < 0:
-				if velocity.y < initialVelocity.y:
-					velocity.y = initialVelocity.y * -1
-			elif velocity.y > 0:
-				if velocity.y < initialVelocity.y:
-					velocity.y = initialVelocity.y
-	if position.y < mapTop:
-		velocity.y = velocity.y * -1
+			velocity = velocity.bounce(collision.normal)
+
+func SetMapBottom(value):
+	mapBottom = value
 
 func SetMapTop(value):
 	mapTop = value
