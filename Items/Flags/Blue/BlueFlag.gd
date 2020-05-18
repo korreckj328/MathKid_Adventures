@@ -27,4 +27,5 @@ func _on_Timer_timeout():
 func _on_BlueFlag_body_entered(_body):
 	if state == DOWN:
 		changeState(UP)
+		$FlagSound.play()
 		$Timer.start()

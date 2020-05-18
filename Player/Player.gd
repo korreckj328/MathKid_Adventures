@@ -11,10 +11,17 @@ var anim
 var newAnim
 var velocity = Vector2()
 var mapBottom = 20000
+var mapNormal = Vector2(0,-1)
+var snapBottom = Vector2(0,1)
+var noSnap = Vector2(0,0)
+var snap = Vector2()
 
 export(int) var runSpeed
 export(int) var jumpSpeed
 export(int) var gravity
+
+func PlayCoinSound():
+	$CoinSound.play()
 
 func _ready():
 	changeState(IDLE)
@@ -47,8 +54,11 @@ func changeState(newState):
 
 func _physics_process(delta):
 	if position.y > mapBottom:
+		$FallSound.play()
 		changeState(DEAD)
 		return
+	
+	snap = snapBottom
 	
 	getInput()
 	velocity.y += gravity
@@ -56,42 +66,25 @@ func _physics_process(delta):
 		anim = newAnim
 		$AnimationPlayer.play(anim)
 	
-	var collisions = move_and_collide(velocity * delta)
-	if collisions == null:
-		if state in [IDLE, RUN] and velocity.y != 0 and !is_on_floor():
-			changeState(JUMP)
-		if state == JUMP and velocity.y > 0:
-			newAnim = "fall"
-	else:
-		if !collisions.collider.is_in_group("MovingPlatforms"):
-			velocity = move_and_slide(velocity, Vector2(0,-1))
-			for idx in range(get_slide_count()):
-				var collision = get_slide_collision(idx)
-				if collision.collider.is_in_group("Enemies"):
-					var playerFeet = (position + $Hitbox.shape.extents).y
-					if playerFeet < collision.collider.position.y:
-						collision.collider.takeDamage()
-						velocity.y += -200
-						changeState(JUMP)
-					else:
-						hurt()
-			if state == JUMP and is_on_floor():
-				changeState(IDLE)
-		else:
-			velocity = move_and_slide(velocity, Vector2(0,-1))
-			position.y = collisions.position.y
-			for idx in range(get_slide_count()):
-				var collision = get_slide_collision(idx)
-				if collision.collider.is_in_group("Enemies"):
-					var playerFeet = (position + $Hitbox.shape.extents).y
-					if playerFeet < collision.collider.position.y:
-						collision.collider.takeDamage()
-						velocity.y += -200
-						changeState(JUMP)
-					else:
-						hurt()
-			if state == JUMP and is_on_floor():
-				changeState(IDLE)
+	var oldVelocity = velocity
+	velocity = move_and_slide_with_snap(velocity, snap, mapNormal)
+	for idx in range(get_slide_count()):
+		var collision = get_slide_collision(idx)
+		if collision.collider.is_in_group("Enemies"):
+			var playerFeet = (position + $Hitbox.shape.extents).y
+			if playerFeet < collision.collider.position.y:
+				collision.collider.takeDamage()
+				velocity.y += -200
+				changeState(JUMP)
+				$SquishedSound.play()
+			else:
+				hurt()
+		
+	if state == JUMP and is_on_floor():
+		changeState(IDLE)
+	if state == JUMP and velocity.y > 0:
+		newAnim = "fall"
+
 
 func getInput():
 	if state == HURT:
@@ -109,9 +102,11 @@ func getInput():
 	if left:
 		velocity.x -= runSpeed
 		$Sprite.flip_h = true
-	if jump and is_on_floor() and velocity.y == 0:
+	if jump and is_on_floor():
+		$JumpSound.play()
+		snap = noSnap
 		changeState(JUMP)
-		velocity.y += -550
+		velocity.y = -550
 	
 	if state == IDLE and velocity.x != 0:
 		changeState(RUN)
@@ -128,17 +123,6 @@ func start(pos):
 
 func hurt():
 	if state != HURT:
+		$HurtSound.play()
 		changeState(HURT)
-
-
-
-
-
-
-
-
-
-
-
-
 

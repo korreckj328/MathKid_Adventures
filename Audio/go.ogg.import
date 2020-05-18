@@ -11,5 +11,5 @@ dest_files=[ "res://.import/go.ogg-4d9c805594822e053bfd312c823ee338.oggstr" ]
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

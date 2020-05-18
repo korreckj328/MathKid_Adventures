@@ -28,7 +28,8 @@ func _ready():
 		for platform in platforms.get_children():
 			platform.SetMapTop(mapTop)
 			platform.SetMapBottom(mapBottom)
-
+	$Male/GoSound.play()
+	$Male/Music.play()
 
 func setCameraLimits():
 	var mapSize = $World.get_used_rect()
@@ -60,6 +61,7 @@ func spawnCoins():
 func onCoinPickup():
 	score += 1
 	GameState.score = score
+	$Male.PlayCoinSound()
 	emit_signal("scoreChanged", score)
 
 func _on_Male_dead():
@@ -69,3 +71,4 @@ func _on_Male_dead():
 func _on_BlueFlag_flagReached():
 	var map = GameState.nextLevel()
 	get_tree().change_scene(map)
+

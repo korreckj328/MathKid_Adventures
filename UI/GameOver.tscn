@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Backgrounds/blue_desert.png" type="Texture" id=1]
 [ext_resource path="res://UI/Kenney Future.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://UI/GameOver.gd" type="Script" id=3]
+[ext_resource path="res://Audio/correct.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Audio/lose1.ogg" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
@@ -10,9 +12,9 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id=2]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 48
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
@@ -116,8 +118,8 @@ margin_left = 462.0
 margin_top = 317.0
 margin_right = 621.0
 margin_bottom = 381.0
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 align = 2
 placeholder_text = "XX"
 __meta__ = {
@@ -159,6 +161,12 @@ margin_bottom = 491.689
 custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 5 )
 text = "Exit"
+
+[node name="Correct" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Incorrect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 [connection signal="pressed" from="CheckButton" to="." method="_on_CheckButton_pressed"]
 [connection signal="pressed" from="TryAgainButton" to="." method="_on_TryAgainButton_pressed"]
 [connection signal="pressed" from="GoButton" to="." method="_on_GoButton_pressed"]

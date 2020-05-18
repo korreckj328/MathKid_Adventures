@@ -28,15 +28,16 @@ func SetQuestion():
 		Operators.SUBTRACT:
 			operator = "-"
 			operandTwo = GameState.GetOperand()
+			if operandOne < operandTwo:
+				var temp = operandOne
+				operandOne = operandTwo
+				operandTwo = temp
 			correctAnswer = operandOne - operandTwo
 		Operators.MULTIPLY:
 			operator = "x"
 			operandTwo = GameState.GetMultiplicationOperand()
 			correctAnswer = operandOne * operandTwo
-	if operandOne < operandTwo:
-		var temp = operandOne
-		operandOne = operandTwo
-		operandTwo = temp
+	
 	$Operand1.text = str(operandOne)
 	$Operand2.text = str(operandTwo)
 	$Operator.text = operator
@@ -58,6 +59,7 @@ func _on_CheckButton_pressed():
 			return
 	
 	if userAnswer != str(correctAnswer):
+		$Incorrect.play()
 		$Message.text = "I'm sorry the answer\nis"
 		$Answer.text = str(correctAnswer)
 		$Answer.editable = false
@@ -67,6 +69,7 @@ func _on_CheckButton_pressed():
 		$TryAgainButton.visible = true
 		return
 	
+	$Correct.play()
 	$Message.text = "Correct!"
 	$Answer.editable = false
 	$CheckButton.disabled = true

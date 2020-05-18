@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Backgrounds/colored_land.png" type="Texture" id=1]
 [ext_resource path="res://Levels/Level.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemies/BlueSlime/BlueSlime.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Items/Flags/Blue/BlueFlag.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Audio/Cheerful Annoyance.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Audio/go.ogg" type="AudioStream" id=6]
 
 [node name="LevelOne" instance=ExtResource( 2 )]
 position = Vector2( 741.94, 376.705 )
@@ -27,6 +29,15 @@ tile_data = PoolIntArray( 196696, 0, 0, 196697, 0, 0, 196698, 0, 0, 458833, 0, 0
 [node name="Male" parent="." index="3"]
 runSpeed = 300
 jumpSpeed = -500
+
+[node name="GoSound" type="AudioStreamPlayer2D" parent="Male" index="4"]
+stream = ExtResource( 6 )
+
+[node name="Music" type="AudioStreamPlayer2D" parent="Male" index="5"]
+stream = ExtResource( 5 )
+autoplay = true
+attenuation = 0.406126
+area_mask = 2
 
 [node name="PlayerStart" parent="." index="4"]
 position = Vector2( -519.436, 758.992 )
