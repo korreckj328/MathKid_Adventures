@@ -49,29 +49,19 @@ func _physics_process(delta):
 	if position.y > mapBottom:
 		changeState(DEAD)
 		return
-	velocity.y += gravity * delta
+	
 	getInput()
+	velocity.y += gravity
 	if newAnim != anim:
 		anim = newAnim
 		$AnimationPlayer.play(anim)
 	
-	if state == JUMP and is_on_floor():
-		changeState(IDLE)
-	if state == JUMP and velocity.y > 0:
-		newAnim = "fall"
 	var collisions = move_and_collide(velocity * delta)
 	if collisions == null:
-		velocity = move_and_slide(velocity, Vector2(0,-1))
-		for idx in range(get_slide_count()):
-			var collision = get_slide_collision(idx)
-			if collision.collider.is_in_group("Enemies"):
-				var playerFeet = (position + $Hitbox.shape.extents).y
-				if playerFeet < collision.collider.position.y:
-					collision.collider.takeDamage()
-					velocity.y += -200
-					changeState(JUMP)
-				else:
-					hurt()
+		if state in [IDLE, RUN] and velocity.y != 0 and !is_on_floor():
+			changeState(JUMP)
+		if state == JUMP and velocity.y > 0:
+			newAnim = "fall"
 	else:
 		if !collisions.collider.is_in_group("MovingPlatforms"):
 			velocity = move_and_slide(velocity, Vector2(0,-1))
@@ -85,6 +75,23 @@ func _physics_process(delta):
 						changeState(JUMP)
 					else:
 						hurt()
+			if state == JUMP and is_on_floor():
+				changeState(IDLE)
+		else:
+			velocity = move_and_slide(velocity, Vector2(0,-1))
+			position.y = collisions.position.y
+			for idx in range(get_slide_count()):
+				var collision = get_slide_collision(idx)
+				if collision.collider.is_in_group("Enemies"):
+					var playerFeet = (position + $Hitbox.shape.extents).y
+					if playerFeet < collision.collider.position.y:
+						collision.collider.takeDamage()
+						velocity.y += -200
+						changeState(JUMP)
+					else:
+						hurt()
+			if state == JUMP and is_on_floor():
+				changeState(IDLE)
 
 func getInput():
 	if state == HURT:
@@ -95,15 +102,16 @@ func getInput():
 	var jump = Input.is_action_just_pressed("Jump")
 	
 	velocity.x = 0
+	#velocity.y = 0
 	if right:
 		velocity.x += runSpeed
 		$Sprite.flip_h = false
 	if left:
 		velocity.x -= runSpeed
 		$Sprite.flip_h = true
-	if jump and is_on_floor():
+	if jump and is_on_floor() and velocity.y == 0:
 		changeState(JUMP)
-		velocity.y = jumpSpeed
+		velocity.y += -550
 	
 	if state == IDLE and velocity.x != 0:
 		changeState(RUN)

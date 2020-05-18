@@ -115,8 +115,8 @@ __meta__ = {
 "_edit_group_": true
 }
 runSpeed = 350
-jumpSpeed = -600
-gravity = 750
+jumpSpeed = -750
+gravity = 450
 
 [node name="Sprite" type="Sprite" parent="."]
 vframes = 12
