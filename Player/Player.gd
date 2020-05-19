@@ -12,7 +12,7 @@ var newAnim
 var velocity = Vector2()
 var mapBottom = 20000
 var mapNormal = Vector2(0,-1)
-var snapBottom = Vector2(0,1)
+var snapBottom = Vector2(0,15)
 var noSnap = Vector2(0,0)
 var snap = Vector2()
 
