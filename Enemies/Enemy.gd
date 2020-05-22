@@ -5,7 +5,6 @@ export (int) var gravity
 
 var velocity = Vector2()
 var facing = 1
-
 var anim
 var newAnim
 var mapBottom = 2000000
@@ -44,6 +43,7 @@ func _physics_process(delta):
 			velocity.y = -100
 	if position.y > mapBottom:
 		queue_free()
+	
 
 func _ready():
 	newAnim = "Move"

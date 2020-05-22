@@ -28,6 +28,10 @@ GameState="*res://GameState.gd"
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "codeandweb.texturepacker" )
+
 [input]
 
 Right={
@@ -67,6 +71,7 @@ Jump={
 2d_physics/layer_3="enemies"
 2d_physics/layer_4="items"
 2d_physics/layer_5="movingEnvironment"
+2d_physics/layer_6="projectiles"
 
 [rendering]
 

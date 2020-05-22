@@ -4,6 +4,7 @@
 [ext_resource path="res://Player/male/spritesheet.png" type="Texture" id=2]
 
 [node name="Male" instance=ExtResource( 1 )]
+collision_mask = 61
 gravity = 15
 
 [node name="Sprite" parent="." index="0"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Backgrounds/colored_land.png" type="Texture" id=1]
 [ext_resource path="res://Levels/Level.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Items/Flags/Blue/BlueFlag.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Audio/Cheerful Annoyance.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Audio/go.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Enemies/Robot/Robot.tscn" type="PackedScene" id=7]
 
 [node name="LevelOne" instance=ExtResource( 2 )]
 position = Vector2( 741.94, 376.705 )
@@ -61,6 +62,12 @@ position = Vector2( 4239.04, 1129.52 )
 
 [node name="BlueSlime5" parent="Enemies" index="5" instance=ExtResource( 3 )]
 position = Vector2( 6018.62, 1332.29 )
+
+[node name="Robot" parent="Enemies" index="6" instance=ExtResource( 7 )]
+position = Vector2( 5262.61, 1150.23 )
+
+[node name="Robot2" parent="Enemies" index="7" instance=ExtResource( 7 )]
+position = Vector2( 2454.35, 1292.57 )
 
 [node name="BlueFlag" parent="." index="7" instance=ExtResource( 4 )]
 position = Vector2( 7050.87, 943.346 )

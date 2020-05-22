@@ -1,0 +1,15 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+path="res://.import/spritesheet.tpsheet-d69ce8aece231701ad577a1c26f3a650.res"
+
+[deps]
+
+files=[ "res://Enemies/Robot/spritesheet.sprites/character_robot_attack0.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_attack1.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_cheer0.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_cheer1.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_climb0.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_climb1.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_fall.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_hit.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_idle.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_jump.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_run0.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_run1.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_run2.tres" ]
+
+source_file="res://Enemies/Robot/spritesheet.tpsheet"
+dest_files=[ "res://.import/spritesheet.tpsheet-d69ce8aece231701ad577a1c26f3a650.res", "res://Enemies/Robot/spritesheet.sprites/character_robot_attack0.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_attack1.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_cheer0.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_cheer1.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_climb0.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_climb1.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_fall.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_hit.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_idle.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_jump.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_run0.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_run1.tres", "res://Enemies/Robot/spritesheet.sprites/character_robot_run2.tres" ]
+
+[params]
+

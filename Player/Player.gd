@@ -52,7 +52,7 @@ func changeState(newState):
 			emit_signal("dead")
 			hide()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if position.y > mapBottom:
 		$FallSound.play()
 		changeState(DEAD)
@@ -66,7 +66,6 @@ func _physics_process(delta):
 		anim = newAnim
 		$AnimationPlayer.play(anim)
 	
-	var oldVelocity = velocity
 	velocity = move_and_slide_with_snap(velocity, snap, mapNormal)
 	for idx in range(get_slide_count()):
 		var collision = get_slide_collision(idx)

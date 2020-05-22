@@ -1,0 +1,213 @@
+{
+	"textures": [
+		{
+			"image": "spritesheet.png",
+			"size": {
+				"w": 1344,
+				"h": 512
+			},
+			"sprites": [
+				{
+					"filename": "character_robot_attack0.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 192,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "character_robot_attack1.png",
+					"region": {
+						"x": 192,
+						"y": 0,
+						"w": 192,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "character_robot_cheer0.png",
+					"region": {
+						"x": 384,
+						"y": 0,
+						"w": 192,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "character_robot_cheer1.png",
+					"region": {
+						"x": 576,
+						"y": 0,
+						"w": 192,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "character_robot_climb0.png",
+					"region": {
+						"x": 768,
+						"y": 0,
+						"w": 192,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "character_robot_climb1.png",
+					"region": {
+						"x": 960,
+						"y": 0,
+						"w": 192,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "character_robot_fall.png",
+					"region": {
+						"x": 1152,
+						"y": 0,
+						"w": 192,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "character_robot_hit.png",
+					"region": {
+						"x": 0,
+						"y": 256,
+						"w": 192,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "character_robot_idle.png",
+					"region": {
+						"x": 192,
+						"y": 256,
+						"w": 192,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "character_robot_jump.png",
+					"region": {
+						"x": 384,
+						"y": 256,
+						"w": 192,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "character_robot_run0.png",
+					"region": {
+						"x": 576,
+						"y": 256,
+						"w": 192,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "character_robot_run1.png",
+					"region": {
+						"x": 768,
+						"y": 256,
+						"w": 192,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "character_robot_run2.png",
+					"region": {
+						"x": 960,
+						"y": 256,
+						"w": 192,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:aefde255346b49db76cace9180d9f3d6:671a889690b58738f46a46ac0234b59d:1b6ff94623e0282c57e59f9e13c5e64b$"
+	}
+}
