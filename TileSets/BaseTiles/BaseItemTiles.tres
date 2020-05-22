@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=9 format=2]
+[gd_resource type="TileSet" load_steps=10 format=2]
 
 [ext_resource path="res://Items/Flags/Blue/flagBlue.png" type="Texture" id=1]
 [ext_resource path="res://Items/Flags/Yellow/flagYellow.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Items/HealthUP/hud_heartFull.png" type="Texture" id=6]
 [ext_resource path="res://Items/Flags/Green/flagGreen.png" type="Texture" id=7]
 [ext_resource path="res://Items/Coins/Gold/coinGold.png" type="Texture" id=8]
+[ext_resource path="res://TileSets/BaseTiles/boxItem.png" type="Texture" id=9]
 
 [resource]
 0/name = "coinBronze.png 0"
@@ -122,3 +123,17 @@
 7/shape_one_way_margin = 0.0
 7/shapes = [  ]
 7/z_index = 0
+8/name = "boxItem.png 8"
+8/texture = ExtResource( 9 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 1, 71, 69 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0

@@ -6,6 +6,7 @@ onready var platforms = $Platforms
 onready var coins = $Coins
 var BronzeCoin = preload("res://Items/Coins/Bronze/BronzeCoin.tscn")
 var fireBall = preload("res://Projectiles/Fireball/Fireball.tscn")
+var itemBlock = preload("res://Items/ItemBlock/ItemBlock.tscn")
 var score
 
 func spawnFireball(facing, mobPosition, mapBottom):
@@ -58,6 +59,7 @@ func spawnCoins():
 	for cell in coins.get_used_cells():
 		var id = coins.get_cellv(cell)
 		var type = coins.tile_set.tile_get_name(id)
+		# print(type)
 		match type:
 			"coinBronze.png 0":
 				var c = BronzeCoin.instance()
@@ -65,7 +67,18 @@ func spawnCoins():
 				c.init(pos + coins.cell_size / 2)
 				add_child(c)
 				c.connect("pickup", self, "onCoinPickup")
+			"boxItem.png 8":
+				var b = itemBlock.instance()
+				var pos = coins.map_to_world(cell)
+				b.init(pos + coins.cell_size / 2)
+				add_child(b)
+				b.connect("spawnItem", self, "spawnPowerup")
 
+func spawnPowerup():
+	pass
+
+func OnHealthPickup():
+	$Male.heal()
 
 func onCoinPickup():
 	score += 1

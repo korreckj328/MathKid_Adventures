@@ -78,6 +78,10 @@ func _physics_process(_delta):
 				$SquishedSound.play()
 			else:
 				hurt()
+		elif collision.collider.is_in_group("ItemBlocks"):
+			var playerHead = position.y
+			if playerHead > collision.collider.position.y:
+				collision.collider.bounceUpward()
 		
 	if state == JUMP and is_on_floor():
 		changeState(IDLE)
@@ -124,4 +128,9 @@ func hurt():
 	if state != HURT:
 		$HurtSound.play()
 		changeState(HURT)
+
+func heal():
+	if life < 3:
+		life += 1
+		emit_signal("lifeChanged", life)
 
