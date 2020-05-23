@@ -1,7 +1,7 @@
 extends Node
 
 var startingLevel = 1
-var numberOfLevels = 2
+var numberOfLevels = 3
 var currentLevel = 1
 var score
 var rng = RandomNumberGenerator.new()
