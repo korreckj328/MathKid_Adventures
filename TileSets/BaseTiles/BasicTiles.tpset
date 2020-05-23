@@ -1,0 +1,2598 @@
+{
+	"textures": [
+		{
+			"image": "BasicTiles.png",
+			"size": {
+				"w": 504,
+				"h": 1484
+			},
+			"sprites": [
+				{
+					"filename": "hill_large.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 48,
+						"h": 146
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "hill_largeAlt.png",
+					"region": {
+						"x": 1,
+						"y": 149,
+						"w": 48,
+						"h": 146
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "hill_small.png",
+					"region": {
+						"x": 51,
+						"y": 1,
+						"w": 48,
+						"h": 106
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "hill_smallAlt.png",
+					"region": {
+						"x": 1,
+						"y": 297,
+						"w": 48,
+						"h": 106
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "box.png",
+					"region": {
+						"x": 101,
+						"y": 1,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxAlt.png",
+					"region": {
+						"x": 173,
+						"y": 1,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxCoin.png",
+					"region": {
+						"x": 245,
+						"y": 1,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxCoinAlt.png",
+					"region": {
+						"x": 317,
+						"y": 1,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxCoinAlt_disabled.png",
+					"region": {
+						"x": 389,
+						"y": 1,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxCoin_disabled.png",
+					"region": {
+						"x": 51,
+						"y": 109,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxEmpty.png",
+					"region": {
+						"x": 51,
+						"y": 181,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxExplosive.png",
+					"region": {
+						"x": 51,
+						"y": 253,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxExplosiveAlt.png",
+					"region": {
+						"x": 51,
+						"y": 325,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxExplosive_disabled.png",
+					"region": {
+						"x": 1,
+						"y": 405,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxItem.png",
+					"region": {
+						"x": 1,
+						"y": 477,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxItemAlt.png",
+					"region": {
+						"x": 1,
+						"y": 549,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxItemAlt_disabled.png",
+					"region": {
+						"x": 1,
+						"y": 621,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxItem_disabled.png",
+					"region": {
+						"x": 1,
+						"y": 693,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "boxWarning.png",
+					"region": {
+						"x": 1,
+						"y": 765,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "brickWall.png",
+					"region": {
+						"x": 1,
+						"y": 837,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castle.png",
+					"region": {
+						"x": 1,
+						"y": 909,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleCenter.png",
+					"region": {
+						"x": 1,
+						"y": 981,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleCenter_rounded.png",
+					"region": {
+						"x": 1,
+						"y": 1053,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleCliffLeft.png",
+					"region": {
+						"x": 1,
+						"y": 1125,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleCliffLeftAlt.png",
+					"region": {
+						"x": 1,
+						"y": 1197,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleCliffRight.png",
+					"region": {
+						"x": 1,
+						"y": 1269,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleCliffRightAlt.png",
+					"region": {
+						"x": 1,
+						"y": 1341,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleHillLeft.png",
+					"region": {
+						"x": 1,
+						"y": 1413,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleHillLeft2.png",
+					"region": {
+						"x": 73,
+						"y": 397,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleHillRight.png",
+					"region": {
+						"x": 73,
+						"y": 469,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleHillRight2.png",
+					"region": {
+						"x": 73,
+						"y": 541,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleLeft.png",
+					"region": {
+						"x": 73,
+						"y": 613,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleMid.png",
+					"region": {
+						"x": 73,
+						"y": 685,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleRight.png",
+					"region": {
+						"x": 73,
+						"y": 757,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirt.png",
+					"region": {
+						"x": 73,
+						"y": 829,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtCenter.png",
+					"region": {
+						"x": 73,
+						"y": 901,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowCenter.png",
+					"region": {
+						"x": 73,
+						"y": 901,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtCenter_rounded.png",
+					"region": {
+						"x": 73,
+						"y": 973,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtCliffLeft.png",
+					"region": {
+						"x": 73,
+						"y": 1045,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtCliffLeftAlt.png",
+					"region": {
+						"x": 73,
+						"y": 1117,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtCliffRight.png",
+					"region": {
+						"x": 73,
+						"y": 1189,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtCliffRightAlt.png",
+					"region": {
+						"x": 73,
+						"y": 1261,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtHillLeft.png",
+					"region": {
+						"x": 73,
+						"y": 1333,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtHillLeft2.png",
+					"region": {
+						"x": 73,
+						"y": 1405,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtHillRight.png",
+					"region": {
+						"x": 123,
+						"y": 73,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtHillRight2.png",
+					"region": {
+						"x": 123,
+						"y": 145,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtLeft.png",
+					"region": {
+						"x": 195,
+						"y": 73,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtMid.png",
+					"region": {
+						"x": 123,
+						"y": 217,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtRight.png",
+					"region": {
+						"x": 195,
+						"y": 145,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "door_closedMid.png",
+					"region": {
+						"x": 267,
+						"y": 73,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "door_openMid.png",
+					"region": {
+						"x": 123,
+						"y": 289,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass.png",
+					"region": {
+						"x": 195,
+						"y": 217,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassCenter.png",
+					"region": {
+						"x": 267,
+						"y": 145,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandCenter.png",
+					"region": {
+						"x": 267,
+						"y": 145,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassCenter_rounded.png",
+					"region": {
+						"x": 339,
+						"y": 73,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandCenter_rounded.png",
+					"region": {
+						"x": 339,
+						"y": 73,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassCliffLeft.png",
+					"region": {
+						"x": 195,
+						"y": 289,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassCliffLeftAlt.png",
+					"region": {
+						"x": 267,
+						"y": 217,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassCliffRight.png",
+					"region": {
+						"x": 339,
+						"y": 145,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassCliffRightAlt.png",
+					"region": {
+						"x": 267,
+						"y": 289,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassHillLeft.png",
+					"region": {
+						"x": 339,
+						"y": 217,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassHillLeft2.png",
+					"region": {
+						"x": 339,
+						"y": 289,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassHillRight.png",
+					"region": {
+						"x": 411,
+						"y": 73,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassHillRight2.png",
+					"region": {
+						"x": 411,
+						"y": 145,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassLeft.png",
+					"region": {
+						"x": 411,
+						"y": 217,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassMid.png",
+					"region": {
+						"x": 411,
+						"y": 289,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "ropeAttached.png",
+					"region": {
+						"x": 461,
+						"y": 1,
+						"w": 18,
+						"h": 70
+					},
+					"margin": {
+						"x": 26,
+						"y": 0,
+						"w": 52,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassRight.png",
+					"region": {
+						"x": 145,
+						"y": 361,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "ladder_mid.png",
+					"region": {
+						"x": 145,
+						"y": 433,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "ladder_top.png",
+					"region": {
+						"x": 217,
+						"y": 361,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "liquidLava.png",
+					"region": {
+						"x": 145,
+						"y": 505,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "liquidWater.png",
+					"region": {
+						"x": 217,
+						"y": 433,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "lock_blue.png",
+					"region": {
+						"x": 289,
+						"y": 361,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "lock_green.png",
+					"region": {
+						"x": 145,
+						"y": 577,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "lock_red.png",
+					"region": {
+						"x": 217,
+						"y": 505,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "lock_yellow.png",
+					"region": {
+						"x": 289,
+						"y": 433,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "rockHillLeft.png",
+					"region": {
+						"x": 361,
+						"y": 361,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "rockHillRight.png",
+					"region": {
+						"x": 433,
+						"y": 361,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sand.png",
+					"region": {
+						"x": 145,
+						"y": 649,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandCliffLeft.png",
+					"region": {
+						"x": 217,
+						"y": 577,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandCliffLeftAlt.png",
+					"region": {
+						"x": 289,
+						"y": 505,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandCliffRight.png",
+					"region": {
+						"x": 361,
+						"y": 433,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandCliffRightAlt.png",
+					"region": {
+						"x": 433,
+						"y": 433,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandHillLeft.png",
+					"region": {
+						"x": 145,
+						"y": 721,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandHillLeft2.png",
+					"region": {
+						"x": 217,
+						"y": 649,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandHillRight.png",
+					"region": {
+						"x": 289,
+						"y": 577,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandHillRight2.png",
+					"region": {
+						"x": 361,
+						"y": 505,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandLeft.png",
+					"region": {
+						"x": 433,
+						"y": 505,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandMid.png",
+					"region": {
+						"x": 145,
+						"y": 793,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandRight.png",
+					"region": {
+						"x": 217,
+						"y": 721,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sign.png",
+					"region": {
+						"x": 289,
+						"y": 649,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "signExit.png",
+					"region": {
+						"x": 361,
+						"y": 577,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snow.png",
+					"region": {
+						"x": 433,
+						"y": 577,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowCenter_rounded.png",
+					"region": {
+						"x": 145,
+						"y": 865,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowCliffLeft.png",
+					"region": {
+						"x": 217,
+						"y": 793,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowCliffLeftAlt.png",
+					"region": {
+						"x": 289,
+						"y": 721,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowCliffRight.png",
+					"region": {
+						"x": 361,
+						"y": 649,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowCliffRightAlt.png",
+					"region": {
+						"x": 433,
+						"y": 649,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowHillLeft.png",
+					"region": {
+						"x": 145,
+						"y": 937,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowHillLeft2.png",
+					"region": {
+						"x": 217,
+						"y": 865,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowHillRight.png",
+					"region": {
+						"x": 289,
+						"y": 793,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowHillRight2.png",
+					"region": {
+						"x": 361,
+						"y": 721,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowLeft.png",
+					"region": {
+						"x": 433,
+						"y": 721,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowMid.png",
+					"region": {
+						"x": 145,
+						"y": 1009,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowRight.png",
+					"region": {
+						"x": 217,
+						"y": 937,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stone.png",
+					"region": {
+						"x": 289,
+						"y": 865,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneCenter.png",
+					"region": {
+						"x": 361,
+						"y": 793,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneCenter_rounded.png",
+					"region": {
+						"x": 433,
+						"y": 793,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneCliffLeft.png",
+					"region": {
+						"x": 145,
+						"y": 1081,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneCliffLeftAlt.png",
+					"region": {
+						"x": 217,
+						"y": 1009,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneCliffRight.png",
+					"region": {
+						"x": 289,
+						"y": 937,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneCliffRightAlt.png",
+					"region": {
+						"x": 361,
+						"y": 865,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneHillLeft2.png",
+					"region": {
+						"x": 433,
+						"y": 865,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneHillRight2.png",
+					"region": {
+						"x": 145,
+						"y": 1153,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneLeft.png",
+					"region": {
+						"x": 217,
+						"y": 1081,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneMid.png",
+					"region": {
+						"x": 289,
+						"y": 1009,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneRight.png",
+					"region": {
+						"x": 361,
+						"y": 937,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneWall.png",
+					"region": {
+						"x": 433,
+						"y": 937,
+						"w": 70,
+						"h": 70
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "signLeft.png",
+					"region": {
+						"x": 145,
+						"y": 1225,
+						"w": 66,
+						"h": 70
+					},
+					"margin": {
+						"x": 3,
+						"y": 0,
+						"w": 4,
+						"h": 0
+					}
+				},
+				{
+					"filename": "signRight.png",
+					"region": {
+						"x": 217,
+						"y": 1153,
+						"w": 66,
+						"h": 70
+					},
+					"margin": {
+						"x": 2,
+						"y": 0,
+						"w": 4,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fence.png",
+					"region": {
+						"x": 289,
+						"y": 1081,
+						"w": 70,
+						"h": 62
+					},
+					"margin": {
+						"x": 0,
+						"y": 8,
+						"w": 0,
+						"h": 8
+					}
+				},
+				{
+					"filename": "fenceBroken.png",
+					"region": {
+						"x": 361,
+						"y": 1009,
+						"w": 70,
+						"h": 62
+					},
+					"margin": {
+						"x": 0,
+						"y": 8,
+						"w": 0,
+						"h": 8
+					}
+				},
+				{
+					"filename": "liquidLavaTop.png",
+					"region": {
+						"x": 433,
+						"y": 1009,
+						"w": 70,
+						"h": 46
+					},
+					"margin": {
+						"x": 0,
+						"y": 24,
+						"w": 0,
+						"h": 24
+					}
+				},
+				{
+					"filename": "liquidLavaTop_mid.png",
+					"region": {
+						"x": 433,
+						"y": 1057,
+						"w": 70,
+						"h": 46
+					},
+					"margin": {
+						"x": 0,
+						"y": 24,
+						"w": 0,
+						"h": 24
+					}
+				},
+				{
+					"filename": "liquidWaterTop.png",
+					"region": {
+						"x": 361,
+						"y": 1073,
+						"w": 70,
+						"h": 46
+					},
+					"margin": {
+						"x": 0,
+						"y": 24,
+						"w": 0,
+						"h": 24
+					}
+				},
+				{
+					"filename": "liquidWaterTop_mid.png",
+					"region": {
+						"x": 433,
+						"y": 1105,
+						"w": 70,
+						"h": 46
+					},
+					"margin": {
+						"x": 0,
+						"y": 24,
+						"w": 0,
+						"h": 24
+					}
+				},
+				{
+					"filename": "window.png",
+					"region": {
+						"x": 145,
+						"y": 1297,
+						"w": 64,
+						"h": 67
+					},
+					"margin": {
+						"x": 3,
+						"y": 2,
+						"w": 6,
+						"h": 3
+					}
+				},
+				{
+					"filename": "castleHalf.png",
+					"region": {
+						"x": 361,
+						"y": 1121,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "dirtHalf.png",
+					"region": {
+						"x": 433,
+						"y": 1153,
+						"w": 70,
+						"h": 42
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 28
+					}
+				},
+				{
+					"filename": "dirtHalfLeft.png",
+					"region": {
+						"x": 213,
+						"y": 1225,
+						"w": 70,
+						"h": 42
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 28
+					}
+				},
+				{
+					"filename": "dirtHalfMid.png",
+					"region": {
+						"x": 145,
+						"y": 1366,
+						"w": 70,
+						"h": 42
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 28
+					}
+				},
+				{
+					"filename": "dirtHalfRight.png",
+					"region": {
+						"x": 145,
+						"y": 1410,
+						"w": 70,
+						"h": 42
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 28
+					}
+				},
+				{
+					"filename": "bridgeLogs.png",
+					"region": {
+						"x": 213,
+						"y": 1269,
+						"w": 70,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 44,
+						"w": 0,
+						"h": 44
+					}
+				},
+				{
+					"filename": "sandHalf.png",
+					"region": {
+						"x": 211,
+						"y": 1297,
+						"w": 70,
+						"h": 42
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 28
+					}
+				},
+				{
+					"filename": "bridge.png",
+					"region": {
+						"x": 289,
+						"y": 1145,
+						"w": 70,
+						"h": 21
+					},
+					"margin": {
+						"x": 0,
+						"y": 49,
+						"w": 0,
+						"h": 49
+					}
+				},
+				{
+					"filename": "sandHalfLeft.png",
+					"region": {
+						"x": 285,
+						"y": 1168,
+						"w": 70,
+						"h": 42
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 28
+					}
+				},
+				{
+					"filename": "sandHalfMid.png",
+					"region": {
+						"x": 285,
+						"y": 1212,
+						"w": 70,
+						"h": 42
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 28
+					}
+				},
+				{
+					"filename": "castleHalfLeft.png",
+					"region": {
+						"x": 285,
+						"y": 1256,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "castleHalfMid.png",
+					"region": {
+						"x": 283,
+						"y": 1299,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "castleHalfRight.png",
+					"region": {
+						"x": 361,
+						"y": 1164,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "sandHalfRight.png",
+					"region": {
+						"x": 433,
+						"y": 1197,
+						"w": 70,
+						"h": 42
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 28
+					}
+				},
+				{
+					"filename": "snowHalf.png",
+					"region": {
+						"x": 357,
+						"y": 1207,
+						"w": 70,
+						"h": 42
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 28
+					}
+				},
+				{
+					"filename": "snowHalfLeft.png",
+					"region": {
+						"x": 357,
+						"y": 1251,
+						"w": 70,
+						"h": 42
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 28
+					}
+				},
+				{
+					"filename": "snowHalfMid.png",
+					"region": {
+						"x": 429,
+						"y": 1241,
+						"w": 70,
+						"h": 42
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 28
+					}
+				},
+				{
+					"filename": "ropeVertical.png",
+					"region": {
+						"x": 481,
+						"y": 1,
+						"w": 7,
+						"h": 70
+					},
+					"margin": {
+						"x": 32,
+						"y": 0,
+						"w": 63,
+						"h": 0
+					}
+				},
+				{
+					"filename": "door_closedTop.png",
+					"region": {
+						"x": 429,
+						"y": 1285,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 29,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "door_openTop.png",
+					"region": {
+						"x": 357,
+						"y": 1295,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 29,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "grassHalf.png",
+					"region": {
+						"x": 429,
+						"y": 1328,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "ropeHorizontal.png",
+					"region": {
+						"x": 211,
+						"y": 1341,
+						"w": 70,
+						"h": 7
+					},
+					"margin": {
+						"x": 0,
+						"y": 32,
+						"w": 0,
+						"h": 63
+					}
+				},
+				{
+					"filename": "snowHalfRight.png",
+					"region": {
+						"x": 217,
+						"y": 1350,
+						"w": 70,
+						"h": 42
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 28
+					}
+				},
+				{
+					"filename": "grassHalfLeft.png",
+					"region": {
+						"x": 217,
+						"y": 1394,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "grassHalfMid.png",
+					"region": {
+						"x": 289,
+						"y": 1342,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "grassHalfRight.png",
+					"region": {
+						"x": 289,
+						"y": 1385,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "tochLit.png",
+					"region": {
+						"x": 361,
+						"y": 1338,
+						"w": 30,
+						"h": 69
+					},
+					"margin": {
+						"x": 20,
+						"y": 0,
+						"w": 40,
+						"h": 1
+					}
+				},
+				{
+					"filename": "tochLit2.png",
+					"region": {
+						"x": 393,
+						"y": 1338,
+						"w": 30,
+						"h": 69
+					},
+					"margin": {
+						"x": 19,
+						"y": 0,
+						"w": 40,
+						"h": 1
+					}
+				},
+				{
+					"filename": "stoneHalf.png",
+					"region": {
+						"x": 425,
+						"y": 1371,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "stoneHalfLeft.png",
+					"region": {
+						"x": 217,
+						"y": 1437,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "stoneHalfMid.png",
+					"region": {
+						"x": 289,
+						"y": 1428,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "torch.png",
+					"region": {
+						"x": 361,
+						"y": 1409,
+						"w": 30,
+						"h": 52
+					},
+					"margin": {
+						"x": 20,
+						"y": 17,
+						"w": 40,
+						"h": 18
+					}
+				},
+				{
+					"filename": "stoneHalfRight.png",
+					"region": {
+						"x": 393,
+						"y": 1414,
+						"w": 70,
+						"h": 41
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 29
+					}
+				},
+				{
+					"filename": "grassLedgeLeft.png",
+					"region": {
+						"x": 101,
+						"y": 73,
+						"w": 5,
+						"h": 24
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grassLedgeRight.png",
+					"region": {
+						"x": 123,
+						"y": 361,
+						"w": 5,
+						"h": 24
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneLedgeLeft.png",
+					"region": {
+						"x": 483,
+						"y": 73,
+						"w": 5,
+						"h": 24
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "stoneLedgeRight.png",
+					"region": {
+						"x": 490,
+						"y": 1,
+						"w": 5,
+						"h": 24
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleLedgeLeft.png",
+					"region": {
+						"x": 465,
+						"y": 1414,
+						"w": 5,
+						"h": 22
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "castleLedgeRight.png",
+					"region": {
+						"x": 108,
+						"y": 73,
+						"w": 5,
+						"h": 22
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtLedgeLeft.png",
+					"region": {
+						"x": 145,
+						"y": 1454,
+						"w": 5,
+						"h": 18
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dirtLedgeRight.png",
+					"region": {
+						"x": 130,
+						"y": 361,
+						"w": 5,
+						"h": 18
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandLedgeLeft.png",
+					"region": {
+						"x": 483,
+						"y": 99,
+						"w": 5,
+						"h": 18
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandLedgeRight.png",
+					"region": {
+						"x": 490,
+						"y": 27,
+						"w": 5,
+						"h": 18
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowLedgeLeft.png",
+					"region": {
+						"x": 497,
+						"y": 1,
+						"w": 5,
+						"h": 18
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "snowLedgeRight.png",
+					"region": {
+						"x": 472,
+						"y": 1414,
+						"w": 5,
+						"h": 18
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:5c998f56f3143068eceed51eaf31032f:432d6957087676aa25adfb6290dc16d1:77ce8e018348a67f77b5cfc37b85b31b$"
+	}
+}
