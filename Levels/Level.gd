@@ -5,16 +5,8 @@ onready var slimes = $Enemies.get_children()
 onready var platforms = $Platforms
 onready var coins = $Coins
 var BronzeCoin = preload("res://Items/Coins/Bronze/BronzeCoin.tscn")
-var fireBall = preload("res://Projectiles/Fireball/Fireball.tscn")
 var itemBlock = preload("res://Items/ItemBlock/ItemBlock.tscn")
 var score
-
-func spawnFireball(facing, mobPosition, mapBottom):
-	var f = fireBall.instance()
-	add_child(f)
-	mobPosition.y -= 350
-	mobPosition.x -= 780
-	f.init(mobPosition, facing, mapBottom)
 
 func _ready():
 	score = GameState.score
@@ -32,8 +24,6 @@ func _ready():
 	var mapBottom = (mapSize.end.y + 5) * cellSize.y
 	for slime in slimes:
 		slime.SetMapBottom(mapBottom)
-		if slime.is_in_group("Fireballers"):
-			slime.connect("fireball", self, "spawnFireball")
 	if platforms.get_child_count() != 0:
 		for platform in platforms.get_children():
 			platform.SetMapTop(mapTop)

@@ -9,8 +9,7 @@ var mapBottom = 2000000
 
 
 # initialize the speed to the right x direction
-func init(pos, facing, bottom):
-	position = pos
+func init(facing, bottom):
 	speed.x = speed.x * facing
 	mapBottom = bottom
 

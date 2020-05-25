@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-signal fireball
+var fireBall = preload("res://Projectiles/Fireball/Fireball.tscn")
 
 export (int) var speed
 export (int) var gravity
@@ -42,7 +42,11 @@ func _physics_process(delta):
 				newAnim = "Attack"
 				flip()
 				readyToFire = false
-				emit_signal("fireball", facing, global_position, mapBottom)
+				var world = get_parent()
+				var f = fireBall.instance()
+				f.init(facing, mapBottom)
+				world.add_child(f)
+				f.position = $SpawnLeft.global_position
 				$ShotTimer.start()
 			else:
 				if $CastLeft.is_colliding():
@@ -56,7 +60,11 @@ func _physics_process(delta):
 				velocity.x = 0
 				newAnim = "Attack"
 				readyToFire = false
-				emit_signal("fireball", facing, global_position, mapBottom)
+				var world = get_parent()
+				var f = fireBall.instance()
+				f.init(facing, mapBottom)
+				world.add_child(f)
+				f.position = $SpawnLeft.global_position
 				$ShotTimer.start()
 			else:
 				if $CastRight.is_colliding():
