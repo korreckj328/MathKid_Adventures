@@ -8,4 +8,7 @@ It's early in the construction of the game.  Levels are limited,  there aren't m
 
 The assets were purchased from [Kenney](https://kenney.itch.io)
 
+### The game can be played here [https://korreckj328.github.io/MathKid-Adventures-Game-Site/]
+
+
 Please enjoy and check back often for updates as things are moving and being added most days.
