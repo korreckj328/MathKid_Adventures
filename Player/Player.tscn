@@ -144,6 +144,11 @@ anims/swim = SubResource( 7 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 1.4, 1.4 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_left = 0.3
+drag_margin_right = 0.3
 
 [node name="SquishedSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
