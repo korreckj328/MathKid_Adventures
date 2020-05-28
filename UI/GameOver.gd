@@ -14,6 +14,7 @@ func _ready():
 	$GoButton.visible = false
 	$TryAgainButton.visible = false
 	SetQuestion()
+	$Answer.grab_focus()
 
 func SetQuestion():
 	operandOne = GameState.GetOperand()
@@ -92,6 +93,7 @@ func _on_TryAgainButton_pressed():
 	$CheckButton.visible = true
 	$TryAgainButton.disabled = true
 	$TryAgainButton.visible = false
+	$Answer.grab_focus()
 
 func _on_GoButton_pressed():
 	var levelNumberInteger = GameState.currentLevel
