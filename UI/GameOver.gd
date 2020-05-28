@@ -16,6 +16,18 @@ func _ready():
 	SetQuestion()
 	$Answer.grab_focus()
 
+func _physics_process(delta):
+	if Input.is_action_just_released("ui_accept"):
+		if !$CheckButton.disabled: 
+			self._on_CheckButton_pressed()
+			return
+		if !$TryAgainButton.disabled:
+			self._on_TryAgainButton_pressed()
+			return
+		if !$GoButton.disabled:
+			self._on_GoButton_pressed()
+			return
+
 func SetQuestion():
 	operandOne = GameState.GetOperand()
 	
