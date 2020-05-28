@@ -1,7 +1,7 @@
-extends KinematicBody2D
+extends Area2D
 
 export (Vector2) var speed
-export (int) var gravity
+export (int) var fireBallGravity
 export (float) var rotationDegrees
 
 var mapBottom = 2000000
@@ -17,11 +17,12 @@ func _physics_process(delta):
 	if position.y > mapBottom:
 		queue_free()
 	$Sprite.rotate(deg2rad(rotationDegrees))
-	var collision = move_and_collide(speed * delta)
-	if collision:
-		if collision.collider.is_in_group("Players"):
-			collision.collider.hurt()
-			queue_free()
-		else:
-			queue_free()
-	
+	self.position += speed * delta
+
+
+func _on_Fireball_body_entered(body):
+	if body.is_in_group("Players"):
+		body.hurt()
+		queue_free()
+	else:
+		queue_free()
