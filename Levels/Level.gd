@@ -36,8 +36,6 @@ func setCameraLimits():
 	var cellSize = $World.cell_size
 	var backgroundPosition = $ParallaxBackground/BackLayer/Sprite.global_position
 	var backgroundScale = $ParallaxBackground/BackLayer/Sprite.transform.get_scale()
-	
-	
 	var backgroundSize = $ParallaxBackground/BackLayer/Sprite.get_rect().size * backgroundScale
 	var backgroundRect = Rect2(backgroundPosition, backgroundSize)
 	
@@ -45,9 +43,6 @@ func setCameraLimits():
 	$Male/Camera2D.limit_right = (mapSize.end.x + 10) * cellSize.x
 	$Male/Camera2D.limit_top = backgroundRect.position.y
 	$Male/Camera2D.limit_bottom = backgroundRect.end.y - 100
-	
-	print(backgroundRect.position.y)
-	print(backgroundRect.end.y)
 
 func setPlayerLimits():
 	var mapSize = $World.get_used_rect()
