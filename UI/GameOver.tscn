@@ -13,8 +13,8 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxEmpty" id=2]
-content_margin_left = 2.0
-content_margin_right = 2.0
+content_margin_left = 15.0
+content_margin_right = 15.0
 
 [sub_resource type="DynamicFont" id=3]
 size = 48
@@ -122,6 +122,7 @@ margin_right = 621.0
 margin_bottom = 381.0
 custom_styles/normal = SubResource( 2 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/cursor_color = Color( 0, 0, 0, 1 )
 align = 2
 caret_blink = true
 __meta__ = {
