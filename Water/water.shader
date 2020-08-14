@@ -3,7 +3,7 @@ shader_type canvas_item;
 uniform vec4 blueTint: hint_color;
 uniform vec2 spriteScale = vec2(16.0f, 9.0f);
 uniform float scaleX = 0.6333f;
-uniform vec2 tiledFactor = vec2(20.0f, 2.0f);
+uniform vec2 tiledFactor = vec2(16.0f, 9.0f);
 
 float rand(vec2 coord) {
 	return fract(sin(dot(coord, vec2(12.9898f, 78.233f))) * 43758.5453123f);
@@ -31,8 +31,8 @@ void fragment() {
 	vec2 noiseCoord1 = tiledUVs * spriteScale * scaleX;
 	vec2 noiseCoord2 = tiledUVs * spriteScale * scaleX + 4.0f;
 	
-	vec2 motion1 = vec2(sin(TIME + tiledUVs.x + tiledUVs.y) * 0.5f, (cos(TIME + tiledUVs.x + tiledUVs.y) * 0.5));
-	vec2 motion2 = vec2(sin(TIME + tiledUVs.x + tiledUVs.y) * 0.1f, (sin(TIME + tiledUVs.x + tiledUVs.y) * 0.05f));
+	vec2 motion1 = vec2(TIME * 0.3f, TIME * -0.4);
+	vec2 motion2 = vec2(TIME * 0.1f, TIME * 0.5f);
 	
 	vec2 distortion1 = vec2(noise(noiseCoord1 + motion1), noise(noiseCoord2 + motion1)) - vec2(0.5f);
 	vec2 distortion2 = vec2(noise(noiseCoord1 + motion2), noise(noiseCoord2 + motion2)) - vec2(0.5f);
@@ -50,7 +50,7 @@ void fragment() {
 	nearTop = 1.0f - nearTop;
 	
 	float edgeLower = 0.6f;
-	float edgeUpper = edgeLower + 0.3f;
+	float edgeUpper = edgeLower + 0.1f;
 	
 	color = mix(color, vec4(1.0f), nearTop);
 	if (nearTop > edgeLower) {

@@ -72,9 +72,11 @@ Jump={
 2d_physics/layer_4="items"
 2d_physics/layer_5="movingEnvironment"
 2d_physics/layer_6="projectiles"
+2d_physics/layer_7="water"
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 quality/driver/fallback_to_gles2=true
 quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"

@@ -133,4 +133,7 @@ func heal():
 	if life < 3:
 		life += 1
 		emit_signal("lifeChanged", life)
+		
+func playSplash():
+	$SplashSound.play()
 
