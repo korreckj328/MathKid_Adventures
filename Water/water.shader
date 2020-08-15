@@ -45,6 +45,8 @@ void fragment() {
 	color = mix(color, blueTint, 0.5f);
 	color.rgb = mix(vec3(0.5f), color.rgb, 1.4f);
 	
+	vec3 normalmap = texture(NORMAL_TEXTURE, UV + distortionSum * 5.5, 0.0f).rgb;
+	
 	float nearTop = (tiledUVs.y + distortionSum.y) / (0.8f / spriteScale.y);
 	nearTop = clamp(nearTop, 0.0f, 1.0f);
 	nearTop = 1.0f - nearTop;
@@ -63,4 +65,5 @@ void fragment() {
 	
 	
 	COLOR = color;
+	NORMALMAP = normalmap;
 }
