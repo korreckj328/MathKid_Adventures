@@ -5,7 +5,7 @@
 [ext_resource path="res://Audio/game_over.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Audio/jump2.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Audio/jump1.ogg" type="AudioStream" id=5]
-[ext_resource path="res://Player/light.png" type="Texture" id=6]
+[ext_resource path="res://Player/light2.png" type="Texture" id=6]
 [ext_resource path="res://Audio/coin5.ogg" type="AudioStream" id=7]
 [ext_resource path="res://Audio/hurt2.ogg" type="AudioStream" id=8]
 
@@ -164,7 +164,7 @@ stream = ExtResource( 8 )
 stream = ExtResource( 3 )
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 253.743, -163.206 )
-scale = Vector2( 11.1288, 6.50308 )
+position = Vector2( 696.225, -400.715 )
+scale = Vector2( -13.7579, 21.0445 )
 texture = ExtResource( 6 )
-color = Color( 0.964706, 0.968627, 0.85098, 0.776471 )
+color = Color( 0.933333, 0.945098, 0.584314, 0.776471 )
