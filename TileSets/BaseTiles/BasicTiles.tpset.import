@@ -1,0 +1,15 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_tileset"
+type="Resource"
+path="res://.import/BasicTiles.tpset-67963d3e0936fe9e1841bd20b978fa21.res"
+
+[deps]
+
+files=[ "BasicTiles.png", "res://TileSets/BaseTiles/BasicTiles.res" ]
+
+source_file="res://TileSets/BaseTiles/BasicTiles.tpset"
+dest_files=[ "res://.import/BasicTiles.tpset-67963d3e0936fe9e1841bd20b978fa21.res", "BasicTiles.png", "res://TileSets/BaseTiles/BasicTiles.res" ]
+
+[params]
+
