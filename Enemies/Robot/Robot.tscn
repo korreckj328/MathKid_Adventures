@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemies/Robot/spritesheet.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/Robot/Robot.gd" type="Script" id=3]
+[ext_resource path="res://Enemies/Robot/spritesheet_n.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25.591, 41.8485 )
@@ -111,6 +112,7 @@ gravity = 750
 [node name="Sprite" parent="." index="0"]
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
+normal_map = ExtResource( 4 )
 vframes = 2
 hframes = 7
 frame = 8

@@ -4,7 +4,7 @@ signal scoreChanged
 onready var slimes = $Enemies.get_children()
 onready var platforms = $Platforms
 onready var coins = $Coins
-onready var water = $Water
+onready var waters = $Waters
 var BronzeCoin = preload("res://Items/Coins/Bronze/BronzeCoin.tscn")
 var itemBlock = preload("res://Items/ItemBlock/ItemBlock.tscn")
 var score
@@ -29,7 +29,9 @@ func _ready():
 		for platform in platforms.get_children():
 			platform.SetMapTop(mapTop)
 			platform.SetMapBottom(mapBottom)
-	water.connect("splash", $Male, "playSplash")
+	if waters.get_child_count() != 0:
+		for water in waters.get_children():
+			water.connect("splash", $Male, "playSplash")
 	$Male/GoSound.play()
 	$Male/Music.play()
 

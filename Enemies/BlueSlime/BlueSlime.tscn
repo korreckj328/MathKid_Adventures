@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemies/BlueSlime/spritesheet-2.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/BlueSlime/spritesheet-2_n.png" type="Texture" id=3]
 
 [node name="BlueSlime" groups=[
 "Characters",
@@ -10,5 +11,6 @@ gravity = 750
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )
+normal_map = ExtResource( 3 )
 frame = 0
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

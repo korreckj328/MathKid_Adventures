@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/male/spritesheet.png" type="Texture" id=2]
 [ext_resource path="res://Audio/Video_Game_Splash-Ploor-699235037.wav" type="AudioStream" id=3]
+[ext_resource path="res://Player/male/spritesheet_n.png" type="Texture" id=4]
 
 [node name="Male" instance=ExtResource( 1 )]
 collision_mask = 125
@@ -10,6 +11,7 @@ gravity = 15
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )
+normal_map = ExtResource( 4 )
 
 [node name="SplashSound" type="AudioStreamPlayer2D" parent="." index="9"]
 stream = ExtResource( 3 )

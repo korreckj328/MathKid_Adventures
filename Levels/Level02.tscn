@@ -106,7 +106,7 @@ velocity = Vector2( 200, 0 )
 position = Vector2( 8218.03, 977.046 )
 velocity = Vector2( 200, 0 )
 
-[node name="Water" parent="." index="8" instance=ExtResource( 8 )]
-position = Vector2( 5353.43, 1630 )
+[node name="Water" parent="Waters" index="0" instance=ExtResource( 8 )]
+position = Vector2( 6067.33, 2047.94 )
 scale = Vector2( 47.88, 2.08 )
 [connection signal="flagReached" from="BlueFlag" to="." method="_on_BlueFlag_flagReached"]

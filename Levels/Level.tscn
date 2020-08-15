@@ -43,6 +43,8 @@ jumpSpeed = -300
 
 [node name="Platforms" type="Node" parent="."]
 
+[node name="Waters" type="Node" parent="."]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource( 5 )]

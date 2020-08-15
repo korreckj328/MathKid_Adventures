@@ -73,13 +73,7 @@ position = Vector2( 2454.35, 1292.57 )
 [node name="BlueFlag" parent="." index="7" instance=ExtResource( 4 )]
 position = Vector2( 7050.87, 943.346 )
 
-[node name="Water" parent="." index="8" instance=ExtResource( 8 )]
-position = Vector2( 3318.65, 1314.65 )
+[node name="Water" parent="Waters" index="0" instance=ExtResource( 8 )]
+position = Vector2( 4060.59, 1691.35 )
 scale = Vector2( 31.96, 2.4 )
-
-[node name="Sprite" parent="Water" index="0"]
-position = Vector2( 0.181664, 3.05176e-05 )
-scale = Vector2( 0.998581, 1 )
 [connection signal="flagReached" from="BlueFlag" to="." method="_on_BlueFlag_flagReached"]
-
-[editable path="Water"]
