@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal spawnItem
+
 export (int) var bumpVelocity
 export (int) var gravity
 
@@ -7,12 +9,12 @@ var healthUP = preload("res://Items/HealthUP/HealthUP.tscn")
 
 enum {IDLE, BOUNCE}
 
-signal spawnItem
-
 var velocity = Vector2()
 var initialPosition
 var state
 var performBounce
+
+onready var hitBox = $HitBox
 
 func _ready():
 	velocity = Vector2(0,0)
@@ -35,7 +37,7 @@ func _physics_process(delta):
 			performBounce = false
 			spawnItem()
 		velocity.y += gravity
-		var collision = move_and_collide(velocity * delta)
+		var _collision = move_and_collide(velocity * delta)
 		if position.y >= initialPosition.y:
 			velocity = Vector2(0,0)
 			position = initialPosition

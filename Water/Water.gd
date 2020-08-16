@@ -14,5 +14,5 @@ func update_shader_aspect_ratio():
 func _on_Sprite_item_rect_changed():
 	update_shader_aspect_ratio()
 
-func _on_Water_body_entered(body):
+func _on_Water_body_entered(_body):
 	emit_signal("splash")

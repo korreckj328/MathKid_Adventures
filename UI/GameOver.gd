@@ -16,7 +16,7 @@ func _ready():
 	SetQuestion()
 	$Answer.grab_focus()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_just_released("ui_accept"):
 		if !$CheckButton.disabled: 
 			self._on_CheckButton_pressed()

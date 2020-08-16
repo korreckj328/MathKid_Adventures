@@ -19,7 +19,7 @@ gravity = 200
 texture = ExtResource( 1 )
 normal_map = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="HitBox" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="Position2D" type="Position2D" parent="."]

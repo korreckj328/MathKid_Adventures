@@ -12,5 +12,5 @@ gravity = 750
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )
 normal_map = ExtResource( 3 )
-frame = 0
+frame = 1
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
