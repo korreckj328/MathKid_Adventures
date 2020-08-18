@@ -28,8 +28,8 @@ func init(pos):
 
 func bounceUpward():
 	if !bouncing:
-		$AudioStreamPlayer2D.play()
 		if !empty:
+			$AudioStreamPlayer2D.play()
 			spawnItem()
 			empty = true
 		moveUp.start()
