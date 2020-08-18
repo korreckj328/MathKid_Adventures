@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/powerUp3.ogg-7bbb963a91fb5446249bdbcefcc9dfce.oggstr"
+
+[deps]
+
+source_file="res://Items/HealthUP/powerUp3.ogg"
+dest_files=[ "res://.import/powerUp3.ogg-7bbb963a91fb5446249bdbcefcc9dfce.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
