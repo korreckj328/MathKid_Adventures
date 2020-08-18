@@ -2,46 +2,37 @@ extends KinematicBody2D
 
 signal spawnItem
 
-export (int) var bumpVelocity
-export (int) var gravity
+export var bounceHeight = 32
+export var bounceTime = 0.4
 
 var healthUP = preload("res://Items/HealthUP/HealthUP.tscn")
 
-enum {IDLE, BOUNCE}
-
-var velocity = Vector2()
 var initialPosition
-var state
-var performBounce
+var bouncing
+var empty
 
-onready var hitBox = $HitBox
+onready var moveUp = $MoveUp
+onready var moveDown = $MoveDown
 
 func _ready():
-	velocity = Vector2(0,0)
-	state = IDLE
-	performBounce = false
+	bouncing = false
+	empty = false
+	moveUp.interpolate_property($Sprite, 'position:y', $Sprite.position.y, $Sprite.position.y - bounceHeight, bounceTime, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	moveUp.interpolate_property($Sprite, 'scale', $Sprite.scale, $Sprite.scale * 1.2, bounceTime, Tween.TRANS_QUAD, Tween.EASE_IN_OUT)
+	moveDown.interpolate_property($Sprite, 'position:y', $Sprite.position.y - bounceHeight, $Sprite.position.y, bounceTime, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	moveDown.interpolate_property($Sprite, 'scale', $Sprite.scale * 1.2, $Sprite.scale, bounceTime, Tween.TRANS_QUAD, Tween.EASE_IN_OUT)
 
 func init(pos):
 	position = pos
 	initialPosition = pos
 
 func bounceUpward():
-	if state == IDLE:
-		state = BOUNCE
-		performBounce = true
-
-func _physics_process(delta):
-	if state == BOUNCE:
-		if performBounce:
-			velocity.y -= bumpVelocity
-			performBounce = false
+	if !bouncing:
+		$AudioStreamPlayer2D.play()
+		if !empty:
 			spawnItem()
-		velocity.y += gravity
-		var _collision = move_and_collide(velocity * delta)
-		if position.y >= initialPosition.y:
-			velocity = Vector2(0,0)
-			position = initialPosition
-			state = IDLE
+			empty = true
+		moveUp.start()
 
 func spawnItem():
 	var m = get_parent().get_parent()
@@ -51,16 +42,8 @@ func spawnItem():
 	m.add_child(hUp)
 	hUp.position = $Position2D.global_position
 
+func _on_MoveUp_tween_completed(_object, _key):
+	moveDown.start()
 
-
-
-
-
-
-
-
-
-
-
-
-
+func _on_MoveDown_tween_completed(_object, _key):
+	bouncing = false

@@ -2,7 +2,7 @@ extends "res://Items/Item.gd"
 
 onready var tween = $Tween
 
-func _on_Item_body_entered(body):
+func _on_Item_body_entered(_body):
 	# space for specific actions
 	if onBoard:
 		onBoard = false
