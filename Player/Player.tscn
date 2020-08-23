@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://idle.tres" type="Animation" id=2]
@@ -111,6 +111,10 @@ tracks/0/keys = {
 "values": [ 9 ]
 }
 
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0, 0.251656, 1 )
+colors = PoolColorArray( 0.541176, 0.443137, 0.235294, 1, 0.541176, 0.443137, 0.235294, 0.776471, 0.541176, 0.443137, 0.235294, 0 )
+
 [node name="Player" type="KinematicBody2D" groups=[
 "Characters",
 "Players",
@@ -118,6 +122,9 @@ tracks/0/keys = {
 collision_layer = 2
 collision_mask = 29
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 runSpeed = 350
 jumpSpeed = -750
 gravity = 450
@@ -168,3 +175,22 @@ position = Vector2( 696.225, -400.715 )
 scale = Vector2( -13.7579, 21.0445 )
 texture = ExtResource( 6 )
 color = Color( 0.933333, 0.945098, 0.584314, 0.776471 )
+
+[node name="Dust" type="CPUParticles2D" parent="."]
+position = Vector2( -2, 52 )
+rotation = -1.5708
+emitting = false
+amount = 40
+lifetime = 0.45
+one_shot = true
+speed_scale = 2.0
+explosiveness = 0.7
+local_coords = false
+emission_shape = 2
+emission_rect_extents = Vector2( 1, 40 )
+gravity = Vector2( 0, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 1.0
+scale_amount = 3.0
+scale_amount_random = 1.0
+color_ramp = SubResource( 8 )
