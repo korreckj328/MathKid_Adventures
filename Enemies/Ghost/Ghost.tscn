@@ -60,12 +60,12 @@ tracks/0/keys = {
 "Enemies",
 ]]
 collision_layer = 4
-collision_mask = 3
+collision_mask = 2
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-speed = 1000
+speed = 140
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )

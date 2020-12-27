@@ -11,10 +11,11 @@ var anim
 var newAnim
 var mapBottom = 2000000
 var facing = -1
-var root_nodes
-var player_location
+var direction
+var distance
 var player_facing
-var player_spirte
+
+var player
 
 func SetMapBottom(value):
 	mapBottom = value
@@ -38,7 +39,23 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 func _ready():
 	change_state(IDLE)
-	root_nodes = get_parent().get_parent().get_children()
+	var main
+	for tmp_node in get_tree().get_root().get_children():
+		if "Main" in tmp_node.name:
+			main = tmp_node
+		if "Level" in tmp_node.name:
+			main = tmp_node
+	if main.name == "Main":
+		for node in main.get_children():
+			if "Level" in node.name:
+				var level = node.get_children()
+				for sub_node in level:
+					if sub_node.name == "Male":
+						player = sub_node
+	elif "Level" in main.name:
+		for node in main.get_children():
+			if node.name == "Male":
+				player = node
 
 func takeDamage():
 	change_state(HURT)
@@ -53,43 +70,43 @@ func _physics_process(delta):
 		anim = newAnim
 		$AnimationPlayer.play(anim)
 	
-	for node in root_nodes:
-		if node.name == "Male":
-			player_location = to_global(node.position)
-			for sub_node in node.get_children():
-				if sub_node.name == "Sprite":
-					if sub_node.flip_h == false:
-						player_facing = RIGHT
-					else:
-						player_facing = LEFT
+	direction = player.global_position - self.global_position
+	distance = sqrt(direction.x * direction.x + direction.y * direction.y)
+	
+	for node in player.get_children():
+		if node.name == "Sprite":
+			if node.flip_h == false:
+				player_facing = RIGHT
+			else:
+				player_facing = LEFT
 	
 	if state == MOVE:
-		var ghost_location = to_global(position)
-		if player_location.x < ghost_location.x:
-			if player_facing == RIGHT:
-				#stay still
-				velocity.x = 0
-				velocity.y = 0
-			else:
-				velocity.x = -speed * delta
-				if player_location.y > to_global(position).y:
-					velocity.y = -speed * delta
-				else:
-					velocity.y = speed * delta
-		else:
+		var tmp = direction.normalized()
+		if direction.normalized().x > 0:
 			if player_facing == LEFT:
 				#stay still
 				velocity.x = 0
 				velocity.y = 0
 			else:
-				velocity.x = -speed * delta
-				if player_location.y > to_global(position).y:
-					velocity.y = speed * delta
+				velocity.x = ceil(direction.normalized().x) * speed
+				if direction.normalized().y > 0:
+					velocity.y = ceil(direction.normalized().y) * speed
 				else:
-					velocity.y = -speed * delta
+					velocity.y = floor(direction.normalized().y) * speed
+		else:
+			if player_facing == RIGHT:
+				#stay still
+				velocity.x = 0
+				velocity.y = 0
+			else:
+				velocity.x = floor(direction.normalized().x) * speed
+				if direction.normalized().y > 0:
+					velocity.y = ceil(direction.normalized().y) * speed
+				else:
+					velocity.y = floor(direction.normalized().y) * speed
 	elif state == IDLE:
-		var ab_dist = abs(to_global(position).x - player_location.x)
-		if ab_dist < 2000:
+		
+		if distance < 2000:
 			change_state(MOVE)
 			
 	velocity = move_and_slide(velocity,Vector2(0,1))

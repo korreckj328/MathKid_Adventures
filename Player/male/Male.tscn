@@ -15,3 +15,5 @@ normal_map = ExtResource( 4 )
 
 [node name="SplashSound" type="AudioStreamPlayer2D" parent="." index="9"]
 stream = ExtResource( 3 )
+
+[node name="center_point" type="Position2D" parent="." index="12"]
