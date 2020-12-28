@@ -41,6 +41,8 @@ void fragment() {
 	
 	vec4 color = textureLod(SCREEN_TEXTURE, SCREEN_UV + distortionSum * 2.0f, 0.0f);
 	vec4 background = textureLod(TEXTURE, tiledUVs + distortionSum * 5.5f, 0.0f);
+	color.a = 0.25f;
+	background.a = 0.25f;
 	color = mix(background, color, 0.3f);
 	color = mix(color, blueTint, 0.5f);
 	color.rgb = mix(vec3(0.5f), color.rgb, 1.4f);
@@ -59,7 +61,7 @@ void fragment() {
 		color.a = 0.0f;
 		
 		if (nearTop < edgeUpper) {
-			color.a = (edgeUpper - nearTop) / (edgeUpper - edgeLower);
+			color.a = ((edgeUpper - nearTop) / (edgeUpper - edgeLower)) / 2.0f;
 		}
 	}
 	

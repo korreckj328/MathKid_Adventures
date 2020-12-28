@@ -8,7 +8,7 @@
 [ext_resource path="res://Audio/go.ogg" type="AudioStream" id=6]
 [ext_resource path="res://Enemies/Robot/Robot.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Water/Water.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Enemies/Ghost/Ghost.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemies/PinkFish/PinkFish.tscn" type="PackedScene" id=9]
 
 [node name="LevelOne" instance=ExtResource( 2 )]
 position = Vector2( 741.94, 376.705 )
@@ -71,13 +71,64 @@ position = Vector2( 5262.61, 1150.23 )
 [node name="Robot2" parent="Enemies" index="7" instance=ExtResource( 7 )]
 position = Vector2( 2454.35, 1292.57 )
 
-[node name="Ghost" parent="Enemies" index="8" instance=ExtResource( 9 )]
-position = Vector2( 946.93, 1090.77 )
-
 [node name="BlueFlag" parent="." index="7" instance=ExtResource( 4 )]
 position = Vector2( 7050.87, 943.346 )
 
 [node name="Water" parent="Waters" index="0" instance=ExtResource( 8 )]
-position = Vector2( 4060.59, 1691.35 )
+position = Vector2( 4086.53, 1705.44 )
 scale = Vector2( 31.96, 2.4 )
+
+[node name="PinkFish" parent="." index="9" instance=ExtResource( 9 )]
+position = Vector2( -436.399, 1094.36 )
+
+[node name="PinkFish2" parent="." index="10" instance=ExtResource( 9 )]
+position = Vector2( -20.6204, 1187.69 )
+
+[node name="PinkFish3" parent="." index="11" instance=ExtResource( 9 )]
+position = Vector2( 533.751, 1116.98 )
+
+[node name="PinkFish4" parent="." index="12" instance=ExtResource( 9 )]
+position = Vector2( 922.66, 1218.81 )
+
+[node name="PinkFish5" parent="." index="13" instance=ExtResource( 9 )]
+position = Vector2( 1679.26, 1092.94 )
+
+[node name="PinkFish6" parent="." index="14" instance=ExtResource( 9 )]
+position = Vector2( 2293.03, 1244.26 )
+
+[node name="PinkFish7" parent="." index="15" instance=ExtResource( 9 )]
+position = Vector2( 2578.7, 1179.21 )
+
+[node name="PinkFish8" parent="." index="16" instance=ExtResource( 9 )]
+position = Vector2( 3314.09, 1064.66 )
+
+[node name="PinkFish9" parent="." index="17" instance=ExtResource( 9 )]
+position = Vector2( 3719.97, 1245.68 )
+
+[node name="PinkFish10" parent="." index="18" instance=ExtResource( 9 )]
+position = Vector2( 4055.14, 1122.64 )
+
+[node name="PinkFish11" parent="." index="19" instance=ExtResource( 9 )]
+position = Vector2( 4281.42, 1179.21 )
+
+[node name="PinkFish12" parent="." index="20" instance=ExtResource( 9 )]
+position = Vector2( 4601.03, 1074.56 )
+
+[node name="PinkFish13" parent="." index="21" instance=ExtResource( 9 )]
+position = Vector2( 5030.95, 1101.43 )
+
+[node name="PinkFish14" parent="." index="22" instance=ExtResource( 9 )]
+position = Vector2( 5364.71, 1158 )
+
+[node name="PinkFish15" parent="." index="23" instance=ExtResource( 9 )]
+position = Vector2( 5738.06, 1182.04 )
+
+[node name="PinkFish16" parent="." index="24" instance=ExtResource( 9 )]
+position = Vector2( 6052.01, 1158 )
+
+[node name="PinkFish17" parent="." index="25" instance=ExtResource( 9 )]
+position = Vector2( 6333.44, 1071.73 )
+
+[node name="PinkFish18" parent="." index="26" instance=ExtResource( 9 )]
+position = Vector2( 7015.09, 1184.87 )
 [connection signal="flagReached" from="BlueFlag" to="." method="_on_BlueFlag_flagReached"]
