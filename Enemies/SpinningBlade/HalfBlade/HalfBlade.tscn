@@ -28,7 +28,11 @@ tracks/0/keys = {
 colors = PoolColorArray( 0.866667, 0.901961, 0.160784, 1, 1, 1, 1, 0.364706 )
 
 [node name="HalfBlade" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource( 3 )
+speed = 500
+gravity = 750
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -46,7 +50,7 @@ one_shot = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Spin = SubResource( 2 )
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+[node name="CPUParticles2DRight" type="CPUParticles2D" parent="."]
 position = Vector2( 26.5165, 14.1421 )
 amount = 50
 lifetime = 0.6
@@ -54,3 +58,23 @@ direction = Vector2( 1, -1 )
 spread = 15.0
 initial_velocity = 75.0
 color_ramp = SubResource( 3 )
+
+[node name="CPUParticles2D2Left" type="CPUParticles2D" parent="."]
+position = Vector2( -28.2842, 13.435 )
+amount = 50
+lifetime = 0.6
+direction = Vector2( -1, -1 )
+spread = 15.0
+initial_velocity = 75.0
+color_ramp = SubResource( 3 )
+
+[node name="CastLeft" type="RayCast2D" parent="."]
+position = Vector2( -26.5165, 10.6066 )
+enabled = true
+cast_to = Vector2( -20, 35 )
+
+[node name="CastRight" type="RayCast2D" parent="."]
+position = Vector2( 24.0416, 10.6066 )
+enabled = true
+cast_to = Vector2( 20, 35 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
