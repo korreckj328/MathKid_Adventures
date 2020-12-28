@@ -29,9 +29,7 @@ func _ready():
 		for platform in platforms.get_children():
 			platform.SetMapTop(mapTop)
 			platform.SetMapBottom(mapBottom)
-	if waters.get_child_count() != 0:
-		for water in waters.get_children():
-			water.connect("splash", $Male, "playSplash")
+	
 	$Male/GoSound.play()
 	$Male/Music.play()
 

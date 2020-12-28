@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Backgrounds/colored_land.png" type="Texture" id=1]
 [ext_resource path="res://Levels/Level.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Enemies/Robot/Robot.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Water/Water.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Enemies/PinkFish/PinkFish.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemies/Piranha/Piranha.tscn" type="PackedScene" id=10]
 
 [node name="LevelOne" instance=ExtResource( 2 )]
 position = Vector2( 741.94, 376.705 )
@@ -43,7 +44,7 @@ attenuation = 0.406126
 area_mask = 2
 
 [node name="PlayerStart" parent="." index="4"]
-position = Vector2( -519.436, 758.992 )
+position = Vector2( -537.316, 797.865 )
 
 [node name="Enemies" type="Node" parent="." index="5"]
 
@@ -131,4 +132,7 @@ position = Vector2( 6333.44, 1071.73 )
 
 [node name="PinkFish18" parent="." index="26" instance=ExtResource( 9 )]
 position = Vector2( 7015.09, 1184.87 )
+
+[node name="Piranha" parent="." index="27" instance=ExtResource( 10 )]
+position = Vector2( 1374.1, 1152 )
 [connection signal="flagReached" from="BlueFlag" to="." method="_on_BlueFlag_flagReached"]
