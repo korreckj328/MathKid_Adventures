@@ -1,23 +1,67 @@
 extends KinematicBody2D
 
-export (int) var speed
-export (int) var gravity
+enum {IDLE, HURT, MOVE}
+enum {RIGHT, LEFT}
 
-var velocity = Vector2()
-var facing = 1
+export (int) var speed
+
+var state
+var velocity = Vector2(0, 0)
 var anim
 var newAnim
 var mapBottom = 2000000
-var initialPosition
-var isSet = true
-var isInLoS = false
+var facing = -1
+var direction
+var distance
+var player_facing
+
+var player
 
 func SetMapBottom(value):
 	mapBottom = value
 
+func change_state(new_state):
+	match new_state:
+		IDLE:
+			state = new_state
+			newAnim = "Flying"
+		HURT:
+			state = new_state
+			newAnim = "Hurt"
+		MOVE:
+			state = new_state
+			newAnim = "Flying"
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "Hurt":
+		queue_free()
+
 func _ready():
-	newAnim = "Flying"
-	initialPosition = get_global_position()
+	change_state(IDLE)
+	var main
+	for tmp_node in get_tree().get_root().get_children():
+		if "Main" in tmp_node.name:
+			main = tmp_node
+		if "Level" in tmp_node.name:
+			main = tmp_node
+	if main.name == "Main":
+		for node in main.get_children():
+			if "Level" in node.name:
+				var level = node.get_children()
+				for sub_node in level:
+					if sub_node.name == "Male":
+						player = sub_node
+	elif "Level" in main.name:
+		for node in main.get_children():
+			if node.name == "Male":
+				player = node
+
+func takeDamage():
+	change_state(HURT)
+	if anim != newAnim:
+		anim = newAnim
+		$AnimationPlayer.play("Hurt")
+	$CollisionShape2D.disabled = true
 
 func _physics_process(delta):
 	$Sprite.flip_h = velocity.x > 0
@@ -25,34 +69,38 @@ func _physics_process(delta):
 		anim = newAnim
 		$AnimationPlayer.play(anim)
 	
-	var currentPosition = get_global_position()
-	if !isSet:
-		if currentPosition.y > initialPosition.y:
-			velocity.y += gravity * delta
-		elif currentPosition.y < initialPosition.y:
-			velocity.y = 0
-			position.y = initialPosition.y
-			if $AttackTimer.is_stopped():
-				$AttackTimer.start()
+	direction = player.global_position - self.global_position
+	distance = sqrt(direction.x * direction.x + direction.y * direction.y)
 	
-	if isInLoS:
-		if isSet:
-			velocity.y += 750
-			isSet = false
+	for node in player.get_children():
+		if node.name == "Sprite":
+			if node.flip_h == false:
+				player_facing = RIGHT
+			else:
+				player_facing = LEFT
 	
-	if facing == -1:
-		if $CastLeft.is_colliding() == false:
-			velocity.x = facing * speed
+	if state == MOVE:
+		if direction.normalized().x > 0:
+			velocity.x = ceil(direction.normalized().x) * speed
+			if direction.normalized().y > 0:
+				velocity.y = ceil(direction.normalized().y) * speed
+			else:
+				velocity.y = floor(direction.normalized().y) * speed
 		else:
-			facing = facing * -1
-			velocity.x = facing * speed
-	else:
-		if $CastRight.is_colliding() == false:
-			velocity.x = facing * speed
-		else:
-			facing = facing * -1
-			velocity.x = facing * speed
+			velocity.x = floor(direction.normalized().x) * speed
+			if direction.normalized().y > 0:
+				velocity.y = ceil(direction.normalized().y) * speed
+			else:
+				velocity.y = floor(direction.normalized().y) * speed
+	elif state == IDLE:
+		if distance < 2000:
+			change_state(MOVE)
+	elif state == HURT:
+		velocity.x = 0
+		velocity.y = 0
+			
 	velocity = move_and_slide(velocity,Vector2(0,1))
+	
 	for idx in range(get_slide_count()):
 		var collision = get_slide_collision(idx)
 		if collision.collider.name in ["Male", "Female"]:
@@ -62,41 +110,3 @@ func _physics_process(delta):
 			velocity.y = -100
 	if position.y > mapBottom:
 		queue_free()
-
-
-
-
-
-func _on_Area2D_body_entered(body):
-	isInLoS = true
-	var xDirection = get_global_position().x - body.get_global_position().x
-	if xDirection > 0:
-		if facing != -1:
-			facing *= -1
-	else:
-		if facing != 1:
-			facing = 1
-	velocity.x = facing * speed
-
-func takeDamage():
-	queue_free()
-
-func _on_Area2D_body_exited(body):
-	isInLoS = false
-	var xDirection = get_global_position().x - body.get_global_position().x
-	if xDirection > 0:
-		if facing != -1:
-			facing *= -1
-	else:
-		if facing != 1:
-			facing = 1
-	velocity.x = facing * speed
-
-
-
-
-
-
-
-func _on_AttackTimer_timeout():
-	isSet = true

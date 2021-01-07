@@ -10,7 +10,7 @@
 [ext_resource path="res://Water/Water.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Enemies/PinkFish/PinkFish.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Enemies/Piranha/Piranha.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Enemies/SpinningBlade/HalfBlade/HalfBlade.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Enemies/Bee/Bee.tscn" type="PackedScene" id=11]
 
 [node name="LevelOne" instance=ExtResource( 2 )]
 position = Vector2( 741.94, 376.705 )
@@ -49,33 +49,44 @@ position = Vector2( -537.316, 797.865 )
 
 [node name="Enemies" type="Node" parent="." index="5"]
 
-[node name="BlueSlime6" parent="Enemies" index="0" instance=ExtResource( 3 )]
+[node name="Bee" parent="Enemies" index="0" instance=ExtResource( 11 )]
+position = Vector2( 1957.13, 910.271 )
+
+[node name="Bee2" parent="Enemies" index="1" instance=ExtResource( 11 )]
+position = Vector2( 2885.94, 1005.26 )
+
+[node name="Bee3" parent="Enemies" index="2" instance=ExtResource( 11 )]
+position = Vector2( 4229.01, 1310.47 )
+
+[node name="Bee4" parent="Enemies" index="3" instance=ExtResource( 11 )]
+position = Vector2( 5104.17, 835.509 )
+
+[node name="Bee5" parent="Enemies" index="4" instance=ExtResource( 11 )]
+position = Vector2( 7532.61, 583.958 )
+
+[node name="BlueSlime6" parent="Enemies" index="5" instance=ExtResource( 3 )]
 position = Vector2( 1357.45, 1330.75 )
 
-[node name="BlueSlime" parent="Enemies" index="1" instance=ExtResource( 3 )]
+[node name="BlueSlime" parent="Enemies" index="6" instance=ExtResource( 3 )]
 position = Vector2( 1507.66, 1341.83 )
 
-[node name="BlueSlime2" parent="Enemies" index="2" instance=ExtResource( 3 )]
+[node name="BlueSlime2" parent="Enemies" index="7" instance=ExtResource( 3 )]
 position = Vector2( 2779.12, 1334.67 )
 
-[node name="BlueSlime3" parent="Enemies" index="3" instance=ExtResource( 3 )]
+[node name="BlueSlime3" parent="Enemies" index="8" instance=ExtResource( 3 )]
 position = Vector2( 3225.79, 1333.77 )
 
-[node name="BlueSlime4" parent="Enemies" index="4" instance=ExtResource( 3 )]
+[node name="BlueSlime4" parent="Enemies" index="9" instance=ExtResource( 3 )]
 position = Vector2( 4239.04, 1129.52 )
 
-[node name="BlueSlime5" parent="Enemies" index="5" instance=ExtResource( 3 )]
+[node name="BlueSlime5" parent="Enemies" index="10" instance=ExtResource( 3 )]
 position = Vector2( 6018.62, 1332.29 )
 
-[node name="Robot" parent="Enemies" index="6" instance=ExtResource( 7 )]
+[node name="Robot" parent="Enemies" index="11" instance=ExtResource( 7 )]
 position = Vector2( 5262.61, 1150.23 )
 
-[node name="Robot2" parent="Enemies" index="7" instance=ExtResource( 7 )]
+[node name="Robot2" parent="Enemies" index="12" instance=ExtResource( 7 )]
 position = Vector2( 2454.35, 1292.57 )
-
-[node name="HalfBlade" parent="Enemies" index="8" instance=ExtResource( 11 )]
-position = Vector2( 1069.17, 1339.21 )
-speed = 500
 
 [node name="BlueFlag" parent="." index="7" instance=ExtResource( 4 )]
 position = Vector2( 7050.87, 943.346 )
@@ -140,4 +151,13 @@ position = Vector2( 7015.09, 1184.87 )
 
 [node name="Piranha" parent="." index="27" instance=ExtResource( 10 )]
 position = Vector2( 1374.1, 1152 )
+
+[node name="Piranha2" parent="." index="28" instance=ExtResource( 10 )]
+position = Vector2( 2730.49, 1089.21 )
+
+[node name="Piranha3" parent="." index="29" instance=ExtResource( 10 )]
+position = Vector2( 3180.75, 1084.87 )
+
+[node name="Piranha4" parent="." index="30" instance=ExtResource( 10 )]
+position = Vector2( 4324.02, 1084.33 )
 [connection signal="flagReached" from="BlueFlag" to="." method="_on_BlueFlag_flagReached"]
